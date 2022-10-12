@@ -21,7 +21,7 @@ the future.
 
 You can use the generic admin account (username/pass: admin/admin). 
 
-## Adding SAML Providers
+## Adding SAML Service Providers
 
 1. Make sure your app has SAML already setup and is using 
    ``http(s)://localhost:7000/saml/idp/metadata`` as it's IdP
