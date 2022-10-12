@@ -1,0 +1,18 @@
+### Django ###
+*.log
+*.pot
+*.pyc
+*.mo
+*.sqlite3
+__pycache__/
+
+### Project-specific ###
+
+
+### Virtual environments ###
+venv
+env
+.env
+
+### IDE ###
+.idea

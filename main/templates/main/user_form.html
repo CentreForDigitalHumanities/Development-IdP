@@ -1,0 +1,68 @@
+{% extends 'base/app_base.html' %}
+
+{% block html_head %}
+    {{ block.super }}
+    <script nonce="{{ request.csp_nonce }}">
+        function hideExtraForms(numExisting) {
+            $('.se-form').each((idx, el) => {
+                if (idx >= numExisting) {
+                    $(el).hide();
+                }
+            });
+        }
+
+        $(function() {
+            $('#add_se').click((event) => {
+                event.preventDefault();
+                let hidden = $('.se-form:hidden');
+                hidden.last().show();
+
+                if (hidden.length - 1 <= 0) {
+                    $('#add_se').hide();
+                }
+            });
+
+            hideExtraForms({{ object.usermail_set.count }});
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="uu-hero text-bg-teal">
+        {% if object %}
+            <h1>Edit user</h1>
+        {% else %}
+            <h1>Create user</h1>
+        {% endif %}
+    </div>
+    <div class="uu-container">
+        <form method="post" enctype="multipart/form-data" class="uu-form uu-form-no-gap mt-3">
+            {% csrf_token %}
+            {{ form }}
+
+            {% if object %}
+                <div class="uu-form-row">
+                    <div class="uu-form-field">
+                        <label class="form-label">
+                            Emails
+                        </label>
+                        <div>
+                            {{ mail_formset.management_form }}
+                            {% for se_form in mail_formset %}
+                                <div class="se-form">
+                                    {{ se_form.as_p }}
+                                    <hr/>
+                                </div>
+                            {% endfor %}
+                            <a href="#" id="add_se">+ Add new</a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+            <button type="submit" class="btn btn-primary mt-3">
+                Save
+            </button>
+        </form>
+    </div>
+{% endblock %}

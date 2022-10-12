@@ -1,0 +1,16 @@
+{% extends 'base/app_base.html' %}
+
+{% block content %}
+    <div class="uu-hero text-bg-teal">
+        <h1>Edit SP</h1>
+    </div>
+    <div class="uu-container">
+        <form method="post" enctype="multipart/form-data" class="uu-form uu-form-no-gap mt-3">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-primary">
+                Save
+            </button>
+        </form>
+    </div>
+{% endblock %}

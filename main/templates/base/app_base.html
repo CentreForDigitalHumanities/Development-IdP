@@ -1,0 +1,48 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+{% load i18n %}
+{% load include_if_exists %}
+{% load menu %}
+{% load transformat %}
+
+{% block uu-navbar %}{% endblock %}
+
+{% block uu-header %}
+    {% get_current_language as LANGUAGE_CODE %}
+    <div class="uu-header-row justify-content-between">
+        <div class="uu-logo">
+            {% with 'cdh.core/images/logo-header-'|add:LANGUAGE_CODE|add:'.svg' as header_image %}
+                <a href="https://www.uu.nl" target="_blank">
+                    <img src="{% static header_image %}" alt="{% trans 'cdh.core:uu' %}"
+                         title="{% trans 'cdh.core:uu' %}"/>
+                </a>
+            {% endwith %}
+        </div>
+        <div class="ms-5 text-black d-none d-md-flex align-content-center">
+            <a href="//{{ request.META.HTTP_HOST }}" class="h3 mb-0">
+                Development IDP
+            </a>
+        </div>
+        <div class="ms-auto border-left">
+            {% if request.user.is_authenticated %}
+                {% with request.user as user %}
+                    {% transformat "site:header:login" user.givenName %}
+                    &nbsp;
+                    <a href="{% url 'main:logout' %}" class="text-decoration-underline">({% trans 'main:globals:logout' %})</a>
+                {% endwith %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="uu-header-row"></div>
+{% endblock %}
+
+{% block uu-footer %}
+    {% generate_menu %}
+    {% get_current_language as LANGUAGE_CODE %}
+    <div class="col-10">
+        {% with 'cdh.core/images/logo-footer-'|add:LANGUAGE_CODE|add:'.svg' as header_image %}
+            <img src="{% static header_image %}" alt="{% trans 'cdh.core:uu' %}" title="{% trans 'cdh.core:uu' %}"/>
+        {% endwith %}
+    </div>
+{% endblock %}

@@ -1,0 +1,126 @@
+[
+{
+  "model": "main.entitlement",
+  "pk": 1,
+  "fields": {
+    "name": "urn:mace:terena.org:tcs:personal-user-example"
+  }
+},
+{
+  "model": "main.entitlement",
+  "pk": 2,
+  "fields": {
+    "name": "urn:x-surfnet:surf.nl:surfdrive-example:quota:50"
+  }
+},
+{
+  "model": "main.entitlement",
+  "pk": 3,
+  "fields": {
+    "name": "urn:mace:surf.nl:value:edulicense"
+  }
+},
+{
+  "model": "main.entitlement",
+  "pk": 4,
+  "fields": {
+    "name": "urn:mace:dir:entitlement:common-lib-terms-example"
+  }
+},
+{
+  "model": "main.entitlement",
+  "pk": 5,
+  "fields": {
+    "name": "urn:mace:incommon.org:reg:education-example"
+  }
+},
+{
+  "model": "main.affiliation",
+  "pk": 1,
+  "fields": {
+    "name": "student"
+  }
+},
+{
+  "model": "main.affiliation",
+  "pk": 2,
+  "fields": {
+    "name": "staff"
+  }
+},
+{
+  "model": "main.affiliation",
+  "pk": 3,
+  "fields": {
+    "name": "employee"
+  }
+},
+{
+  "model": "main.affiliation",
+  "pk": 4,
+  "fields": {
+    "name": "faculty"
+  }
+},
+{
+  "model": "main.affiliation",
+  "pk": 5,
+  "fields": {
+    "name": "member"
+  }
+},
+{
+  "model": "main.usermail",
+  "pk": 1,
+  "fields": {
+    "email": "example@example.org",
+    "user": 1
+  }
+},
+{
+  "model": "main.usermail",
+  "pk": 2,
+  "fields": {
+    "email": "example2@example.org",
+    "user": 1
+  }
+},
+{
+  "model": "main.usermail",
+  "pk": 3,
+  "fields": {
+    "email": "test@example.org",
+    "user": 1
+  }
+},
+{
+  "model": "main.user",
+  "pk": 1,
+  "fields": {
+    "password": "plain$admin",
+    "last_login": "2022-10-12T14:26:38.976Z",
+    "username": "admin",
+    "uid": "admin",
+    "givenName": "Admin",
+    "displayName": "Admin User",
+    "sn": "User",
+    "schacHomeOrganisation": "hum.uu.nl",
+    "eduPersonPrincipalName": "admin@hum.uu.nl",
+    "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:hum.uu.nl:employeeid:admin001",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-10-12T10:27:56Z",
+    "is_superuser": true,
+    "_eduPersonEntitlement": [
+      1
+    ],
+    "_eduPersonAffiliation": [
+      3
+    ],
+    "_isMemberOf": [
+      1
+    ],
+    "user_permissions": []
+  }
+}
+]
