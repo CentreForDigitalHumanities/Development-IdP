@@ -68,59 +68,5 @@
   "fields": {
     "name": "member"
   }
-},
-{
-  "model": "main.usermail",
-  "pk": 1,
-  "fields": {
-    "email": "example@example.org",
-    "user": 1
-  }
-},
-{
-  "model": "main.usermail",
-  "pk": 2,
-  "fields": {
-    "email": "example2@example.org",
-    "user": 1
-  }
-},
-{
-  "model": "main.usermail",
-  "pk": 3,
-  "fields": {
-    "email": "test@example.org",
-    "user": 1
-  }
-},
-{
-  "model": "main.user",
-  "pk": 1,
-  "fields": {
-    "password": "plain$admin",
-    "last_login": "2022-10-12T14:26:38.976Z",
-    "username": "admin",
-    "uid": "admin",
-    "givenName": "Admin",
-    "displayName": "Admin User",
-    "sn": "User",
-    "schacHomeOrganisation": "hum.uu.nl",
-    "eduPersonPrincipalName": "admin@hum.uu.nl",
-    "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:hum.uu.nl:employeeid:admin001",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2022-10-12T10:27:56Z",
-    "is_superuser": true,
-    "_eduPersonEntitlement": [
-      1
-    ],
-    "_eduPersonAffiliation": [
-      3
-    ],
-    "_isMemberOf": [
-      1
-    ],
-    "user_permissions": []
-  }
 }
 ]
