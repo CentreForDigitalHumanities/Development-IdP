@@ -26,7 +26,7 @@ handler400 = 'main.error_views.error_400'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    path('saml/idp/', include('djangosaml2idp.urls')),
+    path('saml/idp/', include('idp.urls')),
     path('impersonate/', include('impersonate.urls')),
     path('cdhcore/', include('cdh.core.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
