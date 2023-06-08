@@ -3,6 +3,7 @@ import json
 import requests
 from braces import views as braces
 from django import forms
+from django.conf import settings
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views import generic
@@ -99,6 +100,7 @@ class SamlSPCreateView(braces.LoginRequiredMixin, generic.FormView):
         sp.pretty_name = form.cleaned_data['description']
         sp._sign_response = True
         sp._sign_assertion = True
+        sp._processor = settings.SAML_IDP_CONFIG['processor']
         sp.entity_id = form.cleaned_data['entity_id']
 
         if form.cleaned_data['metadata_url']:
