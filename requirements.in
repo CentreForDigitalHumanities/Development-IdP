@@ -10,4 +10,4 @@ djangosaml2idp
 cryptography # Not needed if not using encrypted DB fields
 pip-tools
 mysqlclient
-cdh-django-core[core] @ git+https://github.com/DH-IT-Portal-Development/django-shared-core.git@develop # todo: switch to tag
+cdh-django-core[core] @ git+https://github.com/DH-IT-Portal-Development/django-shared-core.git@v3.1.0-alpha-1
