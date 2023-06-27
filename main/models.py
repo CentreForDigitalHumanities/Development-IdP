@@ -136,7 +136,7 @@ class User(AbstractBaseUser):
     displayName = models.CharField(_("display name"), max_length=150,
                                    blank=True)
     sn = models.CharField(_("last name"), max_length=150, blank=True)
-    schacHomeOrganisation = models.CharField(_('home organisation'),
+    schacHomeOrganization = models.CharField(_('home organisation'),
                                              max_length=150, blank=True)
     eduPersonPrincipalName = models.CharField(_('principal name'),
                                               max_length=250)

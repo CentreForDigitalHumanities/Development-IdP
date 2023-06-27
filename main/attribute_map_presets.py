@@ -19,7 +19,7 @@ SC_ALL = {
     "givenName": "givenName",
     "sn": "sn",
     "displayName": "displayName",
-    "schacHomeOrganisation": "schacHomeOrganisation",
+    "schacHomeOrganization": "schacHomeOrganization",
     "eduPersonPrincipalName": "eduPersonPrincipalName",
     "schacPersonalUniqueCode": "schacPersonalUniqueCode",
     "eduPersonEntitlement": "eduPersonEntitlement",

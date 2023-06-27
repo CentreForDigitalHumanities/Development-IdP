@@ -27,7 +27,7 @@ class UserAdmin(UserAdmin):
             _("Organizational"),
             {
                 "fields": (
-                    "schacHomeOrganisation",
+                    "schacHomeOrganization",
                     "eduPersonPrincipalName",
                     "schacPersonalUniqueCode",
                     "_eduPersonAffiliation",

@@ -16,7 +16,7 @@ class UserForm(TemplatedModelForm):
             'givenName',
             'sn',
             'displayName',
-            'schacHomeOrganisation',
+            'schacHomeOrganization',
             'eduPersonPrincipalName',
             'schacPersonalUniqueCode',
             '_eduPersonEntitlement',
