@@ -13,13 +13,17 @@ the future.
 1. Setup a virtualenv and activate it
 2. Install dependencies ``pip install -r requirements.txt``
 3. Load initial data ``python manage.py loaddata main/fixtures/initial.json``
-4. Verify that ``BASE_URL`` in ``testidp/saml_settings.py`` is set to the correct host for your usage
+4. (Optional) Load admin user ``python manage.py loaddata main/fixtures/admin-user.json``
+   * This will create an admin user with username/pass: admin/admin. Will override any existing user with pk 1
+   * Otherwise, create an admin user using ``python manage.py createsuperuser``
+5. (Optional) Load test users ``python manage.py loaddata main/fixtures/surfconext-test-users.json``
+   * These test users are identical to the test users in SurfConext's test environment. 
+   * These accounts will override any existing user using a PK between 2 and 40. 
+6. Verify that ``BASE_URL`` in ``testidp/saml_settings.py`` is set to the correct host for your usage
    * By default this is ``localhost:7000``, which is probably fine?
-5. Run the IDP ``python manage.py runserver <port>``
+7. Run the IDP ``python manage.py runserver <port>``
    * If you kept using the default, this is  ``python manage.py runserver 7000``
-6. You're done!
-
-You can use the generic admin account (username/pass: admin/admin). 
+8. You're done!
 
 ## Adding SAML Service Providers
 
@@ -27,8 +31,7 @@ You can use the generic admin account (username/pass: admin/admin).
    ``http(s)://localhost:7000/saml/idp/metadata`` as it's IdP
    * Replacing ``localhost:7000`` with the actual IP of the IdP
 2. Click 'New' next to Service Provider in the app
-3. Provide at least your SP's ``entity_id`` and ``metadata`` (by URL import or 
-   manually)
+3. Provide at least your SP's ``entity_id`` and ``metadata`` (preferably by URL import)
 4. Choose your starting attribute map* 
 5. Done!
 6. Optionally: review your new SP by editting. You might want to add missing 

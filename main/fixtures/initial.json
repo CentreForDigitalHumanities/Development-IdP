@@ -68,5 +68,45 @@
   "fields": {
     "name": "member"
   }
+},
+  {
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "urn:collab:org:co-example.org",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "urn:collab:org:exchange-university.org",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 3,
+  "fields": {
+    "name": "urn:collab:org:home-university.org",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 4,
+  "fields": {
+    "name": "urn:collab:org:sunet-example.se",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 5,
+  "fields": {
+    "name": "urn:collab:org:surf.nl",
+    "permissions": []
+  }
 }
 ]

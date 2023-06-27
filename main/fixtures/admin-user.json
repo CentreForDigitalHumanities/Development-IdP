@@ -1,0 +1,38 @@
+[
+{
+  "model": "main.usermail",
+  "pk": 1,
+  "fields": {
+    "email": "example@example.org",
+    "user": 1
+  }
+},
+{
+  "model": "main.user",
+  "pk": 1,
+  "fields": {
+    "password": "plain$admin",
+    "last_login": "2023-06-27T11:41:29.921Z",
+    "username": "admin",
+    "uid": "admin",
+    "givenName": "ad",
+    "displayName": "Min, A. (Ad)",
+    "sn": "min",
+    "schacHomeOrganization": "uu.nl",
+    "eduPersonPrincipalName": "admin",
+    "schacPersonalUniqueCode": "admin",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-05-02T08:27:53.470Z",
+    "is_superuser": true,
+    "_eduPersonEntitlement": [
+      1
+    ],
+    "_eduPersonAffiliation": [
+      2
+    ],
+    "_isMemberOf": [],
+    "user_permissions": []
+  }
+}
+]

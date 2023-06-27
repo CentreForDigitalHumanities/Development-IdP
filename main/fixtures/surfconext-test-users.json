@@ -1,0 +1,1659 @@
+[
+  {
+    "pk": 2,
+    "model": "main.user",
+    "fields": {
+      "username": "professor1",
+      "password": "plain$professor1",
+      "uid": "belfort",
+      "schacHomeOrganization": "harvard-example.edu",
+      "eduPersonPrincipalName": "belfort@harvard-example.edu",
+      "cn": "Jordan Ross Belfort",
+      "givenName": "Jordan",
+      "sn": "Belfort",
+      "displayName": "Jordan R. Belfort",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:harvard-example.edu:employeeid:e1523456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [
+        4
+      ],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 3,
+    "model": "main.user",
+    "fields": {
+      "username": "professor2",
+      "password": "plain$professor2",
+      "uid": "wynn",
+      "schacHomeOrganization": "harvard-example.edu",
+      "eduPersonPrincipalName": "wynn@harvard-example.edu",
+      "cn": "Steve Alen Wynn",
+      "givenName": "Steve",
+      "sn": "Wynn",
+      "displayName": "Steve Wynn",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:harvard-example.edu:employeeid:e2523456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [
+        4
+      ],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 4,
+    "model": "main.user",
+    "fields": {
+      "username": "professor3",
+      "password": "plain$professor3",
+      "uid": "isaac",
+      "schacHomeOrganization": "university-example.org",
+      "eduPersonPrincipalName": "isaac@university-example.org",
+      "cn": "Sir Isaac Newton",
+      "givenName": "Isaac",
+      "sn": "Newton",
+      "displayName": "Isaac Newton",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:harvard-example.edu:employeeid:e3523456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [
+        4
+      ],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 5,
+    "model": "main.user",
+    "fields": {
+      "username": "professor4",
+      "password": "plain$professor4",
+      "uid": "g_ohm",
+      "schacHomeOrganization": "university-example.org",
+      "eduPersonPrincipalName": "g_ohm@university-example.org",
+      "cn": "Prof. Dr. Georg Simon Ohm",
+      "givenName": "Georg",
+      "sn": "Ohm",
+      "displayName": "Georg Ohm",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:harvard-example.edu:employeeid:e5523456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [
+        4
+      ],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 6,
+    "model": "main.user",
+    "fields": {
+      "username": "professor5",
+      "password": "plain$professor5",
+      "uid": "jrockefeller",
+      "schacHomeOrganization": "university-example.org",
+      "eduPersonPrincipalName": "jrockefeller@university-example.org",
+      "cn": "John Davison Rockefeller",
+      "givenName": "John Davison",
+      "sn": "Rockefeller",
+      "displayName": "John D. Rockefeller",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:university-example.org:employeeid:e513456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [
+        4
+      ],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 7,
+    "model": "main.user",
+    "fields": {
+      "username": "staff1",
+      "password": "plain$staff1",
+      "uid": "jweeler",
+      "schacHomeOrganization": "university-example.org",
+      "eduPersonPrincipalName": "jweeler@university-example.org",
+      "cn": "Joseph Weeler",
+      "givenName": "Joseph",
+      "sn": "Weeler",
+      "displayName": "Joseph Weeler",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:university-example.org:memberid:m123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        3,
+        5,
+        2
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 8,
+    "model": "main.user",
+    "fields": {
+      "username": "staff2",
+      "password": "plain$staff2",
+      "uid": "awest",
+      "schacHomeOrganization": "university-example.org",
+      "eduPersonPrincipalName": "awest@university-example.org",
+      "cn": "Anthony West",
+      "givenName": "Anthony",
+      "sn": "West",
+      "displayName": "Anthony West",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:university-example.org:memberid:m213456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        3,
+        5,
+        2
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 9,
+    "model": "main.user",
+    "fields": {
+      "username": "staff3",
+      "password": "plain$staff3",
+      "uid": "oburton",
+      "schacHomeOrganization": "university-example.org",
+      "eduPersonPrincipalName": "oburton@university-example.org",
+      "cn": "Oscar Burton",
+      "givenName": "Oscar",
+      "sn": "Burton",
+      "displayName": "Oscar Burton",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:university-example.org:memberid:m313456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        3,
+        5,
+        2
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 10,
+    "model": "main.user",
+    "fields": {
+      "username": "student1",
+      "password": "plain$student1",
+      "uid": "student1",
+      "schacHomeOrganization": "diy.surfconext.nl",
+      "eduPersonPrincipalName": "student1@diy.surfconext.nl",
+      "cn": "Student One",
+      "givenName": "Student",
+      "sn": "One",
+      "displayName": "Student One",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:diy.surfconext.nl:studentid:123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        3,
+        5,
+        2,
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 11,
+    "model": "main.user",
+    "fields": {
+      "username": "student2",
+      "password": "plain$student2",
+      "uid": "FyHah7$J",
+      "schacHomeOrganization": "DIY.surfconext.nl",
+      "eduPersonPrincipalName": "FyHah7$J@DIY.surfconext.nl",
+      "cn": "Student Two",
+      "givenName": "Student",
+      "sn": "Two",
+      "displayName": "Student Two",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:diy.surfconext.nl:studentid:223456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        5,
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 12,
+    "model": "main.user",
+    "fields": {
+      "username": "student3",
+      "password": "plain$student3",
+      "uid": "student3",
+      "schacHomeOrganization": "diy.surfconext.nl",
+      "eduPersonPrincipalName": "student3@diy.surfconext.nl",
+      "cn": "",
+      "givenName": "",
+      "sn": "Three",
+      "displayName": "Student Three",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:diy.surfconext.nl:studentid:323456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        5,
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 13,
+    "model": "main.user",
+    "fields": {
+      "username": "student4",
+      "password": "plain$student4",
+      "uid": "viggo7",
+      "schacHomeOrganization": "unidenmark-example.dk",
+      "eduPersonPrincipalName": "viggo7@unidenmark-example.dk",
+      "cn": "Christian Godfried Viggo Lind",
+      "givenName": "Godfried",
+      "sn": "Viggo",
+      "displayName": "Godfried Viggo",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:unidenmark-example.dk:studentid:323456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 14,
+    "model": "main.user",
+    "fields": {
+      "username": "student5",
+      "password": "plain$student5",
+      "uid": "U3342109",
+      "schacHomeOrganization": "exchange-example.edu",
+      "eduPersonPrincipalName": "U3342109@exchange-example.edu",
+      "cn": "Daisuke Takahashi, \u9ad9\u6a4b \u5927\u8f14",
+      "givenName": "Daisuke",
+      "sn": "Takahashi \u9ad9\u6a4b \u5927\u8f14",
+      "displayName": "Daisuke Takahashi",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:exchange-example.edu:studentid:s123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        5,
+        1
+      ],
+      "_isMemberOf": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "pk": 15,
+    "model": "main.user",
+    "fields": {
+      "username": "student6",
+      "password": "plain$student6",
+      "uid": "U6789003",
+      "schacHomeOrganization": "home-university-example.org",
+      "eduPersonPrincipalName": "U6789003@home-university-example.org",
+      "cn": "Ph\u00f9ng Th\u1ecb L\u1ec7 T\u01b0",
+      "givenName": "Ph\u00f9ng Th\u1ecb",
+      "sn": "L\u1ec7 T\u01b0",
+      "displayName": "Ph\u00f9ng Th\u1ecb L\u1ec7 T\u01b0",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:uniamsterdam-example.nl:studentid:123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [
+        4,
+        1
+      ],
+      "_eduPersonAffiliation": [
+        3,
+        5,
+        2,
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 16,
+    "model": "main.user",
+    "fields": {
+      "username": "student7",
+      "password": "plain$student7",
+      "uid": "jsanden",
+      "schacHomeOrganization": "uniamsterdam-example.nl",
+      "eduPersonPrincipalName": "jsanden@uniamsterdam-example.nl",
+      "cn": "Jaantje van der Sanden",
+      "givenName": "Jaantje",
+      "sn": "van der Sanden",
+      "displayName": "Jaantje van der Sanden",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:uniamsterdam-example.nl:studentid:123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [
+        3,
+        2
+      ],
+      "_eduPersonAffiliation": [
+        1,
+        5
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 17,
+    "model": "main.user",
+    "fields": {
+      "username": "student8",
+      "password": "plain$student8",
+      "uid": "s445599",
+      "schacHomeOrganization": "universitatmadrid-example",
+      "eduPersonPrincipalName": "s445599@universitatmadrid-example",
+      "cn": "Alessandra G\u00f3mez Llarnas",
+      "givenName": "Alessandra",
+      "sn": "G\u00f3mez Llarnas",
+      "displayName": "Alessandra G\u00f3mez Llarnas",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:universitatmadrid-example:studentid:123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        5,
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 18,
+    "model": "main.user",
+    "fields": {
+      "username": "student9",
+      "password": "plain$student9",
+      "uid": "abriseno",
+      "schacHomeOrganization": "universitatmadrid-example.es",
+      "eduPersonPrincipalName": "abriseno@universitatmadrid-example.es",
+      "cn": "Augustus Padr\u00f3n Brise\u00f1o",
+      "givenName": "August",
+      "sn": "Brise\u00f1o",
+      "displayName": "August Brise\u00f1o",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:universitatmadrid-example:studentid:S123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        5,
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 19,
+    "model": "main.user",
+    "fields": {
+      "username": "student10",
+      "password": "plain$student10",
+      "uid": "s134567",
+      "schacHomeOrganization": "pkuni.edu-example.cn",
+      "eduPersonPrincipalName": "s134567@pkuni.edu-example.cn",
+      "cn": "Shao Jingyi, \u90b5\u975c\u5b9c",
+      "givenName": "Shao",
+      "sn": "Jingy",
+      "displayName": "Shao Jingy",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:pkuni.edu-example.cn:studentid:s10513456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        5,
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 20,
+    "model": "main.user",
+    "fields": {
+      "username": "student11",
+      "password": "plain$student11",
+      "uid": "U9088123",
+      "schacHomeOrganization": "uni.poznantech-example.pl",
+      "eduPersonPrincipalName": "U9088123@uni.poznantech-example.pl",
+      "cn": "Roman \u0160vejda",
+      "givenName": "Roman",
+      "sn": "\u0160vejda",
+      "displayName": "Roman \u0160vejda",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:uni.poznantech-example.pl:studentid:S123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        5,
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 21,
+    "model": "main.user",
+    "fields": {
+      "username": "student12",
+      "password": "plain$student12",
+      "uid": "U7128109",
+      "schacHomeOrganization": "uni.poznantech-example.pl",
+      "eduPersonPrincipalName": "U7128109@uni.poznantech-example.pl",
+      "cn": "Anna Ryb\u00ednov\u00e1",
+      "givenName": "Anna",
+      "sn": "Ryb\u00ednov\u00e1",
+      "displayName": "Anna Ryb\u00ednov\u00e1",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:uni.poznantech-example.pl:studentid:S124456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        5,
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 22,
+    "model": "main.user",
+    "fields": {
+      "username": "student13",
+      "password": "plain$student13",
+      "uid": "p0987743",
+      "schacHomeOrganization": "pkuni.edu-example.cn",
+      "eduPersonPrincipalName": "p0987743@pkuni.edu-example.cn",
+      "cn": "Li Qin Ch'ien",
+      "givenName": "Li Qin",
+      "sn": "Ch'ien",
+      "displayName": "Li Qin Ch'ien",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:pkuni.edu-example.cn:studentid:1124456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        5,
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 23,
+    "model": "main.user",
+    "fields": {
+      "username": "student14",
+      "password": "plain$student14",
+      "uid": "student14",
+      "schacHomeOrganization": "stockholmuni-example.se",
+      "eduPersonPrincipalName": "student14@stockholmuni-example.se",
+      "cn": "Martin Nikolaus J\u00f8rgensen",
+      "givenName": "Martin",
+      "sn": "J\u00f8rgensen",
+      "displayName": "Martin N. J\u00f8rgensen",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:stockholmuni-example.se:studentid:123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        5,
+        1
+      ],
+      "_isMemberOf": [
+        4
+      ]
+    }
+  },
+  {
+    "pk": 24,
+    "model": "main.user",
+    "fields": {
+      "username": "student15",
+      "password": "plain$student15",
+      "uid": "student15",
+      "schacHomeOrganization": "stockholmuni-example.se",
+      "eduPersonPrincipalName": "student15@stockholmuni-example.se",
+      "cn": "Sander Johan Kj\u00e6r",
+      "givenName": "Sander",
+      "sn": "Kj\u00e6r",
+      "displayName": "Sander J. Kj\u00e6r",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:stockholmuni-example.se:studentid:223456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        1,
+        5
+      ],
+      "_isMemberOf": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "pk": 25,
+    "model": "main.user",
+    "fields": {
+      "username": "student16",
+      "password": "plain$student16",
+      "uid": "student16",
+      "schacHomeOrganization": "kuni.edu-example.tr",
+      "eduPersonPrincipalName": "student16@kuni.edu-example.tr",
+      "cn": "Er\u00f4ss Neci",
+      "givenName": "Er\u00f4ss",
+      "sn": "Neci",
+      "displayName": "Er\u00f4ss Neci",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:kuni.edu-example.tr:studentid:123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [
+        1
+      ],
+      "_eduPersonAffiliation": [
+        3,
+        5,
+        2,
+        1
+      ],
+      "_isMemberOf": [
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "pk": 26,
+    "model": "main.user",
+    "fields": {
+      "username": "student17",
+      "password": "plain$student17",
+      "uid": "student17",
+      "schacHomeOrganization": "kuni.edu-example.tr",
+      "eduPersonPrincipalName": "student17@kuni.edu-example.tr",
+      "cn": "Kocsis Szesc\u00f5",
+      "givenName": "Kocsis",
+      "sn": "Szesc\u00f5",
+      "displayName": "Kocsis Szesc\u00f5",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:kuni.edu-example.tr:studentid:s123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        5,
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 27,
+    "model": "main.user",
+    "fields": {
+      "username": "student18",
+      "password": "plain$student18",
+      "uid": "student18",
+      "schacHomeOrganization": "kuni.edu-example.tr",
+      "eduPersonPrincipalName": "student18@kuni.edu-example.tr",
+      "cn": "Marjanca Mur\u0161i\u0107",
+      "givenName": "Marjanca",
+      "sn": "Mur\u0161i\u0107",
+      "displayName": "Marjanca Mur\u0161i\u0107",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:kuni.edu-example.tr:studentid:s123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        5,
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 28,
+    "model": "main.user",
+    "fields": {
+      "username": "student19",
+      "password": "plain$student19",
+      "uid": "student19",
+      "schacHomeOrganization": "university-example.org",
+      "eduPersonPrincipalName": "student19@university-example.org",
+      "cn": "Petra Penttil\u00e4",
+      "givenName": "Petra",
+      "sn": "Penttil\u00e4",
+      "displayName": "Petra Penttil\u00e4",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:unidenmark-example.dk:studentid:123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        5,
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 29,
+    "model": "main.user",
+    "fields": {
+      "username": "student20",
+      "password": "plain$student20",
+      "uid": "student20",
+      "schacHomeOrganization": "unidenmark-example.dk",
+      "eduPersonPrincipalName": "student20@unidenmark-example.dk",
+      "cn": "J\u00f3ney Ing\u00f3lfsd\u00f3ttir",
+      "givenName": "J\u00f3ney",
+      "sn": "Ing\u00f3lfsd\u00f3ttir",
+      "displayName": "J\u00f3ney Ing\u00f3lfsd\u00f3ttir",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:unidenmark-example.dk:studentid:s20513456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        5,
+        1
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 30,
+    "model": "main.user",
+    "fields": {
+      "username": "student21",
+      "password": "plain$student21",
+      "uid": "student21",
+      "schacHomeOrganization": "exmplebilbioharderwijk.nl",
+      "eduPersonPrincipalName": "student21@exmplebilbioharderwijk.nl",
+      "cn": "Pietje Puk",
+      "givenName": "Pietje",
+      "sn": "Puk",
+      "displayName": "Pietje Puk",
+      "schacPersonalUniqueCode": "0",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [],
+      "_isMemberOf": []
+    }
+  },
+  {
+    "pk": 31,
+    "model": "main.user",
+    "fields": {
+      "username": "teacher1",
+      "password": "plain$teacher1",
+      "uid": "jstiglitz",
+      "schacHomeOrganization": "harvard-example.edu",
+      "eduPersonPrincipalName": "jstiglitz@harvard-example.edu",
+      "cn": "Joseph Eugene Stiglitz",
+      "givenName": "Joseph",
+      "sn": "Stiglitz",
+      "displayName": "Joseph Stiglitz",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:harvard-example.edu:employeeid:123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [
+        5
+      ],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 32,
+    "model": "main.user",
+    "fields": {
+      "username": "teacher2",
+      "password": "plain$teacher2",
+      "uid": "pkrugman",
+      "schacHomeOrganization": "harvard-example.edu",
+      "eduPersonPrincipalName": "pkrugman@harvard-example.edu",
+      "cn": "Prof. Paul Robin Krugman",
+      "givenName": "Paul",
+      "sn": "Krugman",
+      "displayName": "Paul Krugman",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:harvard-example.edu:employeeid:s123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 33,
+    "model": "main.user",
+    "fields": {
+      "username": "teacher3",
+      "password": "plain$teacher3",
+      "uid": "bbernanke",
+      "schacHomeOrganization": "yale-uni-example.edu",
+      "eduPersonPrincipalName": "bbernanke@yale-uni-example.edu",
+      "cn": "Ben Shalom Bernanke",
+      "givenName": "Ben",
+      "sn": "Bernanke",
+      "displayName": "Ben Bernanke",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:yale-uni-example.edu:employeeid:123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "pk": 34,
+    "model": "main.user",
+    "fields": {
+      "username": "teacher4",
+      "password": "plain$teacher4",
+      "uid": "agreenspan",
+      "schacHomeOrganization": "yale-uni-example.edu",
+      "eduPersonPrincipalName": "agreenspan@yale-uni-example.edu",
+      "cn": "Alan Greenspan",
+      "givenName": "Alan",
+      "sn": "Greenspan",
+      "displayName": "Alan Greenspan",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:yale-uni-example.edu:employeeid:s123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "pk": 35,
+    "model": "main.user",
+    "fields": {
+      "username": "teacher5",
+      "password": "plain$teacher5",
+      "uid": "am_ampere",
+      "schacHomeOrganization": "electrical-uni-example.edu",
+      "eduPersonPrincipalName": "am_ampere@electrical-uni-example.edu",
+      "cn": "Andr\u00e9-Marie Amp\u00e8re",
+      "givenName": "Andr\u00e9-Marie",
+      "sn": "Amp\u00e8re",
+      "displayName": "Andr\u00e9-Marie Amp\u00e8re",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:electrical-uni-example.edu:employeeid:s123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 36,
+    "model": "main.user",
+    "fields": {
+      "username": "teacher6",
+      "password": "plain$teacher6",
+      "uid": "w_rontgen",
+      "schacHomeOrganization": "electrical-uni-example.edu",
+      "eduPersonPrincipalName": "w_rontgen@electrical-uni-example.edu",
+      "cn": "Wilhelm Conrad R\u00f6ntgen",
+      "givenName": "Wilhelm",
+      "sn": "R\u00f6ntgen",
+      "displayName": "Wilhelm R\u00f6ntgen",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:electrical-uni-example.edu:employeeid:123456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 37,
+    "model": "main.user",
+    "fields": {
+      "username": "teacher7",
+      "password": "plain$teacher7",
+      "uid": "m_faraday",
+      "schacHomeOrganization": "electrical-uni-example.edu",
+      "eduPersonPrincipalName": "m_faraday@electrical-uni-example.edu",
+      "cn": "Michael Faraday FRS",
+      "givenName": "Michael",
+      "sn": "Faraday",
+      "displayName": "Michael Faraday",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:electrical-uni-example.edu:employeeid:213456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 38,
+    "model": "main.user",
+    "fields": {
+      "username": "teacher8",
+      "password": "plain$teacher8",
+      "uid": "n_tesla",
+      "schacHomeOrganization": "electrical-uni-example.edu",
+      "eduPersonPrincipalName": "n_tesla@electrical-uni-example.edu",
+      "cn": "Nikola Tesla",
+      "givenName": "Nikola",
+      "sn": "Tesla",
+      "displayName": "Nikola Tesla",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:electrical-uni-example.edu:employeeid:e813456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 39,
+    "model": "main.user",
+    "fields": {
+      "username": "teacher9",
+      "password": "plain$teacher9",
+      "uid": "teacher9",
+      "schacHomeOrganization": "stanford-example.edu",
+      "eduPersonPrincipalName": "teacher9@stanford-example.edu",
+      "cn": "William Henry Gates III",
+      "givenName": "Bill",
+      "sn": "Gates",
+      "displayName": "Bill Gates",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:stanford-example.edu:employeeid:e913456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [
+        1
+      ],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 40,
+    "model": "main.user",
+    "fields": {
+      "username": "teacher10",
+      "password": "plain$teacher10",
+      "uid": "teacher10",
+      "schacHomeOrganization": "stanford-example.edu",
+      "eduPersonPrincipalName": "teacher10@stanford-example.edu",
+      "cn": "Steven Paul Jobs",
+      "givenName": "Steve",
+      "sn": "Jobs",
+      "displayName": "Steve Jobs",
+      "schacPersonalUniqueCode": "urn:schac:personalUniqueCode:nl:local:stanford-example.edu:employeeid:1013456",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "user_permissions": [],
+      "last_login": null,
+      "date_joined": "2023-05-02T08:27:53.470Z",
+      "_eduPersonEntitlement": [
+        1
+      ],
+      "_eduPersonAffiliation": [
+        3,
+        4,
+        5
+      ],
+      "_isMemberOf": [
+        5
+      ]
+    }
+  },
+  {
+    "pk": 2,
+    "model": "main.usermail",
+    "fields": {
+      "email": "Jordan.Belfort@harvard-example.edu",
+      "user": 2
+    }
+  },
+  {
+    "pk": 3,
+    "model": "main.usermail",
+    "fields": {
+      "email": "jordan@harvard-example.edu",
+      "user": 2
+    }
+  },
+  {
+    "pk": 4,
+    "model": "main.usermail",
+    "fields": {
+      "email": "S.Wynn@harvard-example.edu",
+      "user": 3
+    }
+  },
+  {
+    "pk": 5,
+    "model": "main.usermail",
+    "fields": {
+      "email": "Steve.Wynn@example-casino.com",
+      "user": 3
+    }
+  },
+  {
+    "pk": 6,
+    "model": "main.usermail",
+    "fields": {
+      "email": "steve.Wynn@las.vegas.com",
+      "user": 3
+    }
+  },
+  {
+    "pk": 7,
+    "model": "main.usermail",
+    "fields": {
+      "email": "isaacnewton@university-example.org",
+      "user": 4
+    }
+  },
+  {
+    "pk": 8,
+    "model": "main.usermail",
+    "fields": {
+      "email": "newton@university-example.org",
+      "user": 4
+    }
+  },
+  {
+    "pk": 9,
+    "model": "main.usermail",
+    "fields": {
+      "email": "georg.ohm@university-example.org",
+      "user": 5
+    }
+  },
+  {
+    "pk": 10,
+    "model": "main.usermail",
+    "fields": {
+      "email": "John.D.Rockefeller@university-example.org",
+      "user": 6
+    }
+  },
+  {
+    "pk": 11,
+    "model": "main.usermail",
+    "fields": {
+      "email": "Joseph+Weeler@university-example.org",
+      "user": 7
+    }
+  },
+  {
+    "pk": 12,
+    "model": "main.usermail",
+    "fields": {
+      "email": "Anthony_West@university-example.org",
+      "user": 8
+    }
+  },
+  {
+    "pk": 13,
+    "model": "main.usermail",
+    "fields": {
+      "email": "Osc@r__Burton@university-example.org",
+      "user": 9
+    }
+  },
+  {
+    "pk": 14,
+    "model": "main.usermail",
+    "fields": {
+      "email": "student1@diy.surfconext.nl",
+      "user": 10
+    }
+  },
+  {
+    "pk": 15,
+    "model": "main.usermail",
+    "fields": {
+      "email": "s1869831907@example.org",
+      "user": 11
+    }
+  },
+  {
+    "pk": 16,
+    "model": "main.usermail",
+    "fields": {
+      "email": "student3@diy.surfconext.nl",
+      "user": 12
+    }
+  },
+  {
+    "pk": 17,
+    "model": "main.usermail",
+    "fields": {
+      "email": "Godfried.Viggo@unidenmark-example.dk",
+      "user": 13
+    }
+  },
+  {
+    "pk": 18,
+    "model": "main.usermail",
+    "fields": {
+      "email": "U3342109@exchange-example.edu",
+      "user": 14
+    }
+  },
+  {
+    "pk": 19,
+    "model": "main.usermail",
+    "fields": {
+      "email": "LeTu02@home-university-example.org",
+      "user": 15
+    }
+  },
+  {
+    "pk": 20,
+    "model": "main.usermail",
+    "fields": {
+      "email": "U6789003@exchange-example.edu",
+      "user": 15
+    }
+  },
+  {
+    "pk": 21,
+    "model": "main.usermail",
+    "fields": {
+      "email": "jsanden@uniamsterdam-example.nl",
+      "user": 16
+    }
+  },
+  {
+    "pk": 22,
+    "model": "main.usermail",
+    "fields": {
+      "email": "s445599@universitatmadrid-example.es",
+      "user": 17
+    }
+  },
+  {
+    "pk": 23,
+    "model": "main.usermail",
+    "fields": {
+      "email": "A.Briseno@universitatmadrid-example.es",
+      "user": 18
+    }
+  },
+  {
+    "pk": 24,
+    "model": "main.usermail",
+    "fields": {
+      "email": "s134567@pkuni.edu-example.cn",
+      "user": 19
+    }
+  },
+  {
+    "pk": 25,
+    "model": "main.usermail",
+    "fields": {
+      "email": "shaojingy@gmail-example.com",
+      "user": 19
+    }
+  },
+  {
+    "pk": 26,
+    "model": "main.usermail",
+    "fields": {
+      "email": "U9088123@uni.poznantech-example.pl",
+      "user": 20
+    }
+  },
+  {
+    "pk": 27,
+    "model": "main.usermail",
+    "fields": {
+      "email": "U7128109@uni.poznantech-example.pl",
+      "user": 21
+    }
+  },
+  {
+    "pk": 28,
+    "model": "main.usermail",
+    "fields": {
+      "email": "p0987743@pkuni.edu-example.cn",
+      "user": 22
+    }
+  },
+  {
+    "pk": 29,
+    "model": "main.usermail",
+    "fields": {
+      "email": "jorgensen07@stockholmuni-example.se",
+      "user": 23
+    }
+  },
+  {
+    "pk": 30,
+    "model": "main.usermail",
+    "fields": {
+      "email": "kjaer11@stockholmuni-example.se",
+      "user": 24
+    }
+  },
+  {
+    "pk": 31,
+    "model": "main.usermail",
+    "fields": {
+      "email": "eross.neci@kuni.edu-example.tr",
+      "user": 25
+    }
+  },
+  {
+    "pk": 32,
+    "model": "main.usermail",
+    "fields": {
+      "email": "neci.eross@kuni.edu-example.tr",
+      "user": 25
+    }
+  },
+  {
+    "pk": 33,
+    "model": "main.usermail",
+    "fields": {
+      "email": "kocsis.szesco@kuni.edu-example.tr",
+      "user": 26
+    }
+  },
+  {
+    "pk": 34,
+    "model": "main.usermail",
+    "fields": {
+      "email": "Marjanca.Mursic@kuni.edu-example.tr",
+      "user": 27
+    }
+  },
+  {
+    "pk": 35,
+    "model": "main.usermail",
+    "fields": {
+      "email": "ppentila@hotmail-example.org",
+      "user": 28
+    }
+  },
+  {
+    "pk": 36,
+    "model": "main.usermail",
+    "fields": {
+      "email": "ppenttila@university-example.org",
+      "user": 28
+    }
+  },
+  {
+    "pk": 37,
+    "model": "main.usermail",
+    "fields": {
+      "email": "Joney.Ingolfsdottir@unidenmark-example.dk",
+      "user": 29
+    }
+  },
+  {
+    "pk": 38,
+    "model": "main.usermail",
+    "fields": {
+      "email": "Pietje.puk@exmplebilbioharderwijk.nl",
+      "user": 30
+    }
+  },
+  {
+    "pk": 39,
+    "model": "main.usermail",
+    "fields": {
+      "email": "J.E.Stiglitz@harvard-example.edu",
+      "user": 31
+    }
+  },
+  {
+    "pk": 40,
+    "model": "main.usermail",
+    "fields": {
+      "email": "Joseph.Stiglitz@harvard-example.edu",
+      "user": 31
+    }
+  },
+  {
+    "pk": 41,
+    "model": "main.usermail",
+    "fields": {
+      "email": "jstiglitz@harvard-example.edu",
+      "user": 31
+    }
+  },
+  {
+    "pk": 42,
+    "model": "main.usermail",
+    "fields": {
+      "email": "P.R.Krugman@harvard-example.edu",
+      "user": 32
+    }
+  },
+  {
+    "pk": 43,
+    "model": "main.usermail",
+    "fields": {
+      "email": "Paul.Krugman@harvard-example.edu",
+      "user": 32
+    }
+  },
+  {
+    "pk": 44,
+    "model": "main.usermail",
+    "fields": {
+      "email": "pkrugman@harvard-example.edu",
+      "user": 32
+    }
+  },
+  {
+    "pk": 45,
+    "model": "main.usermail",
+    "fields": {
+      "email": "B.S.Bernanke@yale-uni-example.edu",
+      "user": 33
+    }
+  },
+  {
+    "pk": 46,
+    "model": "main.usermail",
+    "fields": {
+      "email": "bbernanke@yale-uni-example.edu",
+      "user": 33
+    }
+  },
+  {
+    "pk": 47,
+    "model": "main.usermail",
+    "fields": {
+      "email": "Ben.Bernanke@yale-uni-example.edu",
+      "user": 33
+    }
+  },
+  {
+    "pk": 48,
+    "model": "main.usermail",
+    "fields": {
+      "email": "A.Greenspan@yale-uni-example.edu",
+      "user": 34
+    }
+  },
+  {
+    "pk": 49,
+    "model": "main.usermail",
+    "fields": {
+      "email": "agreenspan@yale-uni-example.edu",
+      "user": 34
+    }
+  },
+  {
+    "pk": 50,
+    "model": "main.usermail",
+    "fields": {
+      "email": "Alan.Greenspan@yale-uni-example.edu",
+      "user": 34
+    }
+  },
+  {
+    "pk": 51,
+    "model": "main.usermail",
+    "fields": {
+      "email": "am_ampere@electrical-uni-example.edu",
+      "user": 35
+    }
+  },
+  {
+    "pk": 52,
+    "model": "main.usermail",
+    "fields": {
+      "email": "w_rontgen@electrical-uni-example.edu",
+      "user": 36
+    }
+  },
+  {
+    "pk": 53,
+    "model": "main.usermail",
+    "fields": {
+      "email": "m_faraday@electrical-uni-example.edu",
+      "user": 37
+    }
+  },
+  {
+    "pk": 54,
+    "model": "main.usermail",
+    "fields": {
+      "email": "n_tesla@electrical-uni-example.edu",
+      "user": 38
+    }
+  },
+  {
+    "pk": 55,
+    "model": "main.usermail",
+    "fields": {
+      "email": "bill.gates@stanford-example.edu",
+      "user": 39
+    }
+  },
+  {
+    "pk": 56,
+    "model": "main.usermail",
+    "fields": {
+      "email": "steve.jobs@stanford-example.edu",
+      "user": 40
+    }
+  }
+]
