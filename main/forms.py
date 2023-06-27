@@ -15,6 +15,7 @@ class UserForm(TemplatedModelForm):
             'password',
             'givenName',
             'sn',
+            'cn',
             'displayName',
             'schacHomeOrganization',
             'eduPersonPrincipalName',

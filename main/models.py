@@ -133,6 +133,7 @@ class User(AbstractBaseUser):
     )
 
     givenName = models.CharField(_("first name"), max_length=150, blank=True)
+    cn = models.CharField(_("common name"), max_length=150, blank=True)
     displayName = models.CharField(_("display name"), max_length=150,
                                    blank=True)
     sn = models.CharField(_("last name"), max_length=150, blank=True)
