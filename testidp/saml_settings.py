@@ -71,6 +71,8 @@ SAML_IDP_CONFIG = {
             'sign_response': True,
             'sign_assertion': True,
             'want_authn_requests_signed': False,
+            'signing_algorithm': saml2.xmldsig.SIG_RSA_SHA256,
+            'digest_algorithm':  saml2.xmldsig.DIGEST_SHA256,
         },
     },
 
