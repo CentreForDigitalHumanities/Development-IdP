@@ -1,6 +1,27 @@
 {% extends "base/app_base.html" %}
 
 {% block content %}
+    {% if hosted %}
+        <div class="uu-hero text-bg-teal">
+            <h1>Welcome</h1>
+        </div>
+        <div class="uu-container">
+            <p>
+                Welcome to our Development IdP, the IdP you can use if you want
+                to connect a development or testing version of an app to an IdP
+                you want to have more control over.
+                <br/>
+                Anyone can use at Humanities IT can use this IdP if they want,
+                but please try to keep things tidy.
+            </p>
+            <div class="alert alert-warning w-100">
+                This is a reminder that passwords are stored in plaintext! Do
+                not connect <em>anything</em> that contains sensitive
+                information to this IdP. (And obviously, do not create users
+                with passwords you actually use).
+            </div>
+        </div>
+    {% endif %}
     <div class="uu-hero text-bg-teal justify-content-between align-items-center">
         <h1>SAML Service Providers</h1>
         <a class="btn btn-secondary" href="{% url 'main:sp-create' %}">

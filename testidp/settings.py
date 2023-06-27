@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-lb=q@u4df-x0th(5u%$eye_ti#etst+5z+%2=lrh$$le3&v_y$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ENABLE_DEBUG_TOOLBAR = True
-
+HOSTED = False  # Only set to true on idp.dev.im.hum.uu.nl
 ALLOWED_HOSTS = []
 
 
@@ -92,6 +92,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'main.context_processors.hosted',
             ],
         },
     },

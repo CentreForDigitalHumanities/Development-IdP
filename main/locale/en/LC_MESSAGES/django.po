@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-06 11:23+0000\n"
+"POT-Creation-Date: 2023-06-09 14:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,6 +15,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: main/admin.py:25
+msgid "Personal info"
+msgstr "Personal info"
+
+#: main/admin.py:27
+msgid "Organizational"
+msgstr "Organizational"
+
+#: main/admin.py:40
+msgid "Permissions"
+msgstr "Permissions"
+
+#: main/admin.py:50
+msgid "Important dates"
+msgstr "Important dates"
+
+#: main/admin.py:141
+#, python-format
+msgid "%(name)s object with primary key %(key)r does not exist."
+msgstr "%(name)s object with primary key %(key)r does not exist."
+
+#: main/admin.py:153
+msgid "Password changed successfully."
+msgstr "Password changed successfully."
+
+#: main/admin.py:174
+#, python-format
+msgid "Change password: %s"
+msgstr "Change password: %s"
 
 #: main/menus.py:5
 msgid "main:menu:home"
@@ -28,23 +58,130 @@ msgstr "Log in"
 msgid "main:footer:logout"
 msgstr "Log out"
 
-#: main/templates/base/login_header.html:6
+#: main/models.py:115
+msgid "username"
+msgstr "username"
+
+#: main/models.py:119
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+
+#: main/models.py:123
+msgid "A user with that username already exists."
+msgstr "A user with that username already exists."
+
+#: main/models.py:128
+msgid "uid"
+msgstr "uid"
+
+#: main/models.py:135
+msgid "first name"
+msgstr "First name"
+
+#: main/models.py:136
+msgid "display name"
+msgstr "Display name"
+
+#: main/models.py:138
+msgid "last name"
+msgstr "Last name"
+
+#: main/models.py:139
+msgid "home organisation"
+msgstr "Home organisation"
+
+#: main/models.py:141
+msgid "principal name"
+msgstr "Principal name"
+
+#: main/models.py:143
+msgid "Employee/student number"
+msgstr "Employee/student number"
+
+#: main/models.py:164
+msgid "staff status"
+msgstr "Staff status"
+
+#: main/models.py:166
+msgid "Designates whether the user can log into this admin site."
+msgstr "Designates whether the user can log into this admin site."
+
+#: main/models.py:169
+msgid "active"
+msgstr "active"
+
+#: main/models.py:172
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+
+#: main/models.py:176
+msgid "date joined"
+msgstr "Date joined"
+
+#: main/models.py:179
+msgid "superuser status"
+msgstr "Superuser status"
+
+#: main/models.py:182
+msgid ""
+"Designates that this user has all permissions without explicitly assigning "
+"them."
+msgstr ""
+"Designates that this user has all permissions without explicitly assigning "
+"them."
+
+#: main/models.py:188
+msgid "groups"
+msgstr "Groups"
+
+#: main/models.py:191
+msgid ""
+"The groups this user belongs to. A user will get all permissions granted to "
+"each of their groups."
+msgstr ""
+"The groups this user belongs to. A user will get all permissions granted to "
+"each of their groups."
+
+#: main/models.py:203
+msgid "user permissions"
+msgstr "User permissions"
+
+#: main/models.py:205
+msgid "Specific permissions for this user."
+msgstr "Specific permissions for this user."
+
+#: main/password_hashers.py:24
+msgid "algorithm"
+msgstr "Algorithm"
+
+#: main/password_hashers.py:25
+msgid "iterations"
+msgstr "Iterations"
+
+#: main/password_hashers.py:26
+msgid "salt"
+msgstr "Salt"
+
+#: main/password_hashers.py:27
+msgid "hash"
+msgstr "Hash"
+
+#: main/templates/base/app_base.html:17 main/templates/base/app_base.html:18
+#: main/templates/base/app_base.html:45
+msgid "cdh.core:uu"
+msgstr "Utrecht University"
+
+#: main/templates/base/app_base.html:30
 msgid "site:header:login"
 msgstr "Welcome {}!"
 
-#: main/templates/base/login_header.html:7
+#: main/templates/base/app_base.html:32
 msgid "main:globals:logout"
 msgstr "Logout"
-
-#. Translators: This is the title that will end up in the header (in blue)
-#: main/templates/base/site_header.html:4
-msgid "site:header:title"
-msgstr "Welcome to your new Django app"
-
-#. Translators: This is the title that will end up in the tab of the browser
-#: main/templates/base/site_title.html:5
-msgid "site:name"
-msgstr "Example title"
 
 #: main/templates/error/400.html:9
 msgid "main:error:400:title"
@@ -69,7 +206,9 @@ msgstr "Page not found"
 
 #: main/templates/error/404.html:12
 msgid "main:error:404:text"
-msgstr "We can't seem to find the page you're looking for. The link you clicked may be broken or the page may have been moved."
+msgstr ""
+"We can't seem to find the page you're looking for. The link you clicked may "
+"be broken or the page may have been moved."
 
 #: main/templates/error/500.html:9
 msgid "main:error:500:title"
@@ -85,28 +224,40 @@ msgstr "Debug IdP Logged out"
 
 #: main/templates/registration/logged_out.html:12
 msgid "main:logout:text"
-msgstr "THIS IS A DEBUG IdP PLEASE GO AWAY IF YOU DID NOT KNOW YOU WERE GOING TO END UP HERE!"
+msgstr ""
+"THIS IS A DEBUG IdP PLEASE GO AWAY IF YOU DID NOT KNOW YOU WERE GOING TO END "
+"UP HERE!"
 
-#: main/templates/registration/login.html:9
+#: main/templates/registration/login.html:78
+msgid "main:login:title_hosted"
+msgstr "Humanities IT - Debug IdP"
+
+#: main/templates/registration/login.html:81
+msgid "main:login:text_hosted"
+msgstr ""
+"Welcome to the Humanities IT Debug IdP.<br/><br/> Please note that this IdP is for development/testing purposes only, and your usual Solis-ID's won't work here.<br/> If didn't get any login information, please contact your Hum-IT contact."
+
+#: main/templates/registration/login.html:85
 msgid "main:login:title"
-msgstr "Debug IdP"
+msgstr "Local development IdP"
 
-#: main/templates/registration/login.html:12
+#: main/templates/registration/login.html:88
 msgid "main:login:text"
-msgstr "THIS IS A DEBUG IdP PLEASE GO AWAY IF YOU DID NOT KNOW YOU WERE GOING TO END UP HERE!"
+msgstr "Please log in using your locally defined development/test account(s)"
 
-#: main/templates/registration/login.html:16
+#: main/templates/registration/login.html:93
 msgid "main:login:error"
 msgstr "Wrong credentials"
 
-#: main/templates/registration/login.html:20
+#: main/templates/registration/login.html:97
 msgid "main:login:username"
-msgstr "AzureDiamond"
+msgstr "Username"
 
-#: main/templates/registration/login.html:21
+#: main/templates/registration/login.html:98
 msgid "main:login:password"
-msgstr "hunter2"
+msgstr "Password"
 
-#: main/templates/registration/login.html:22
+#: main/templates/registration/login.html:99
 msgid "main:login:submit"
 msgstr "Log in!"
+
