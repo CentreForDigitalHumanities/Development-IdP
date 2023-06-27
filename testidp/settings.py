@@ -145,9 +145,8 @@ PASSWORD_HASHERS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'nl'
+LANGUAGE_CODE = 'en'
 LANGUAGES = (
-    ('nl', _('lang:nl')),
     ('en', _('lang:en')),
 )
 

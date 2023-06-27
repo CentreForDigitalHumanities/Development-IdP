@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-09 14:12+0000\n"
+"POT-Creation-Date: 2023-06-27 13:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,38 +79,42 @@ msgid "first name"
 msgstr "First name"
 
 #: main/models.py:136
+msgid "common name"
+msgstr "Common name"
+
+#: main/models.py:137
 msgid "display name"
 msgstr "Display name"
 
-#: main/models.py:138
+#: main/models.py:139
 msgid "last name"
 msgstr "Last name"
 
-#: main/models.py:139
+#: main/models.py:140
 msgid "home organisation"
 msgstr "Home organisation"
 
-#: main/models.py:141
+#: main/models.py:142
 msgid "principal name"
 msgstr "Principal name"
 
-#: main/models.py:143
+#: main/models.py:144
 msgid "Employee/student number"
 msgstr "Employee/student number"
 
-#: main/models.py:164
+#: main/models.py:165
 msgid "staff status"
 msgstr "Staff status"
 
-#: main/models.py:166
+#: main/models.py:167
 msgid "Designates whether the user can log into this admin site."
 msgstr "Designates whether the user can log into this admin site."
 
-#: main/models.py:169
+#: main/models.py:170
 msgid "active"
 msgstr "active"
 
-#: main/models.py:172
+#: main/models.py:173
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
@@ -118,15 +122,15 @@ msgstr ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 
-#: main/models.py:176
+#: main/models.py:177
 msgid "date joined"
 msgstr "Date joined"
 
-#: main/models.py:179
+#: main/models.py:180
 msgid "superuser status"
 msgstr "Superuser status"
 
-#: main/models.py:182
+#: main/models.py:183
 msgid ""
 "Designates that this user has all permissions without explicitly assigning "
 "them."
@@ -134,11 +138,11 @@ msgstr ""
 "Designates that this user has all permissions without explicitly assigning "
 "them."
 
-#: main/models.py:188
+#: main/models.py:189
 msgid "groups"
 msgstr "Groups"
 
-#: main/models.py:191
+#: main/models.py:192
 msgid ""
 "The groups this user belongs to. A user will get all permissions granted to "
 "each of their groups."
@@ -146,11 +150,11 @@ msgstr ""
 "The groups this user belongs to. A user will get all permissions granted to "
 "each of their groups."
 
-#: main/models.py:203
+#: main/models.py:204
 msgid "user permissions"
 msgstr "User permissions"
 
-#: main/models.py:205
+#: main/models.py:206
 msgid "Specific permissions for this user."
 msgstr "Specific permissions for this user."
 
@@ -228,36 +232,38 @@ msgstr ""
 "THIS IS A DEBUG IdP PLEASE GO AWAY IF YOU DID NOT KNOW YOU WERE GOING TO END "
 "UP HERE!"
 
-#: main/templates/registration/login.html:78
+#: main/templates/registration/login.html:52
 msgid "main:login:title_hosted"
 msgstr "Humanities IT - Debug IdP"
 
-#: main/templates/registration/login.html:81
+#: main/templates/registration/login.html:55
 msgid "main:login:text_hosted"
 msgstr ""
-"Welcome to the Humanities IT Debug IdP.<br/><br/> Please note that this IdP is for development/testing purposes only, and your usual Solis-ID's won't work here.<br/> If didn't get any login information, please contact your Hum-IT contact."
+"Welcome to the Humanities IT Debug IdP.<br/><br/> Please note that this IdP "
+"is for development/testing purposes only, and your usual Solis-ID's won't "
+"work here.<br/> If didn't get any login information, please contact your Hum-"
+"IT contact."
 
-#: main/templates/registration/login.html:85
+#: main/templates/registration/login.html:59
 msgid "main:login:title"
 msgstr "Local development IdP"
 
-#: main/templates/registration/login.html:88
+#: main/templates/registration/login.html:62
 msgid "main:login:text"
 msgstr "Please log in using your locally defined development/test account(s)"
 
-#: main/templates/registration/login.html:93
+#: main/templates/registration/login.html:67
 msgid "main:login:error"
 msgstr "Wrong credentials"
 
-#: main/templates/registration/login.html:97
+#: main/templates/registration/login.html:71
 msgid "main:login:username"
 msgstr "Username"
 
-#: main/templates/registration/login.html:98
+#: main/templates/registration/login.html:72
 msgid "main:login:password"
 msgstr "Password"
 
-#: main/templates/registration/login.html:99
+#: main/templates/registration/login.html:73
 msgid "main:login:submit"
 msgstr "Log in!"
-
