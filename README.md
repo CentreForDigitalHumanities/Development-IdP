@@ -12,18 +12,19 @@ the future.
 
 1. Setup a virtualenv and activate it
 2. Install dependencies ``pip install -r requirements.txt``
-3. Load initial data ``python manage.py loaddata main/fixtures/initial.json``
-4. (Optional) Load admin user ``python manage.py loaddata main/fixtures/admin-user.json``
+4. Run migrations ``python manage.py migrate``
+5. Load initial data ``python manage.py loaddata main/fixtures/initial.json``
+6. (Optional) Load admin user ``python manage.py loaddata main/fixtures/admin-user.json``
    * This will create an admin user with username/pass: admin/admin. Will override any existing user with pk 1
    * Otherwise, create an admin user using ``python manage.py createsuperuser``
-5. (Optional) Load test users ``python manage.py loaddata main/fixtures/surfconext-test-users.json``
+7. (Optional) Load test users ``python manage.py loaddata main/fixtures/surfconext-test-users.json``
    * These test users are identical to the test users in SurfConext's test environment. 
    * These accounts will override any existing user using a PK between 2 and 40. 
-6. Verify that ``BASE_URL`` in ``testidp/saml_settings.py`` is set to the correct host for your usage
+8. Verify that ``BASE_URL`` in ``testidp/saml_settings.py`` is set to the correct host for your usage
    * By default this is ``localhost:7000``, which is probably fine?
-7. Run the IDP ``python manage.py runserver <port>``
+9. Run the IDP ``python manage.py runserver <port>``
    * If you kept using the default, this is  ``python manage.py runserver 7000``
-8. You're done!
+10. You're done!
 
 ## Adding SAML Service Providers
 
