@@ -1,9 +1,9 @@
 
 UU = {
-    "uid": "uushortid",
+    "uid": "uuShortID",
     "mail": "mail",
     "givenName": "givenName",
-    "sn": "uuprefixedsn",
+    "sn": "uuPrefixedSn",
 }
 
 SC = {
