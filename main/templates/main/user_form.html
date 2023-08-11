@@ -36,6 +36,15 @@
         {% endif %}
     </div>
     <div class="uu-container">
+        <div class="col-12">
+            <p>
+                These attributes are named after the attributes used in
+                SurfConext. See
+                <a href="https://wiki.surfnet.nl/display/surfconextdev/Attributes+and+SAML">
+                their documentation
+                </a> for detailed descriptions of all attributes.
+            </p>
+        </div>
         <form method="post" enctype="multipart/form-data" class="uu-form uu-form-no-gap mt-3">
             {% csrf_token %}
             {{ form }}

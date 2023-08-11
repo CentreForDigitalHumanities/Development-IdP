@@ -29,6 +29,22 @@
         </a>
     </div>
     <div class="uu-container">
+        {% if hosted %}
+            <div class="col-12">
+                <p>
+                    If you have multiple SP's you work on, remember that IdPs
+                    load config based on the EntityID. Thus, it is very
+                    important that apps with diverging config/different certs
+                    have a unique EntityID. This can be done by either hosting
+                    the metadata at a (slightly) different URL, or running your
+                    app on different ports. (8000, 8001, etc).
+                </p>
+                <p>
+                    Apps using the exact same config (and certificates) can
+                    share an entry here.
+                </p>
+            </div>
+        {% endif %}
         <div class="col-12">
             <table class="table">
                 <thead>

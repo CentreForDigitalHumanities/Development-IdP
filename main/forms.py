@@ -1,4 +1,6 @@
 from django import forms
+from django.conf import settings
+
 from cdh.core.forms import TemplatedForm, TemplatedModelForm, \
     BootstrapCheckboxInput, BootstrapSelect
 from djangosaml2idp.models import ServiceProvider
@@ -47,25 +49,26 @@ class UserForm(TemplatedModelForm):
 class SPCreateForm(TemplatedForm):
 
     name = forms.CharField(
-        help_text="Not required",
+        help_text="Human friendly name, not required",
         required=False
     )
 
     description = forms.CharField(
         widget=forms.Textarea,
-        help_text="Not required",
+        help_text="Detailed description, not required",
         required=False
     )
 
     entity_id = forms.CharField(
         required=True,
-        help_text="Usually the URL of the SP's metadata"
+        help_text="Almost always the URL of the SP's metadata. (e.g. "
+                  "'http://localhost:8000/saml/metadata/')"
     )
 
     metadata_url = forms.URLField(
         required=False,
-        help_text="The recommended way to create a new SP is let it auto "
-                  "import metadata from this URL"
+        help_text="The IdP will import the metadata by fetching it from this "
+                  "url, which is the recommended way to create a new SP"
     )
 
     metadata = forms.CharField(
@@ -90,6 +93,16 @@ class SPCreateForm(TemplatedForm):
                   "that case, which contains all available attributes)",
         required=False
     )
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        if settings.HOSTED:
+            self.fields['description'].help_text = ("Please fill in contact "
+                                                    "details for your app here")
+            self.fields['description'].required = True
+            self.fields['name'].help_text = "The name of your app"
+            self.fields['name'].required = True
 
     def clean(self):
         cleaned_data = super().clean()
@@ -116,7 +129,16 @@ class SPForm(TemplatedModelForm):
 
     class Meta:
         model = ServiceProvider
-        fields = '__all__'
+        fields = [
+            'pretty_name',
+            'entity_id',
+            'description',
+            'active',
+            'remote_metadata_url',
+            'local_metadata',
+            'metadata_expiration_dt',
+            '_attribute_mapping',
+        ]
         widgets = {
             'active': BootstrapCheckboxInput,
             '_sign_response': BootstrapSelect(
@@ -133,3 +155,20 @@ class SPForm(TemplatedModelForm):
                 choices=YES_NO_UNKNOWN
             ),
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields['_attribute_mapping'].help_text = """
+        A dictionary mapping user attributes from the names used in the IdP to
+        the desired name in the SAML response. The key should be the name in the
+        IdP, the value the name in the SAML Response
+        """
+        self.fields['remote_metadata_url'].help_text = ""
+
+        if settings.HOSTED:
+            self.fields['description'].help_text = ("Please fill in contact "
+                                                    "details for your app here")
+            self.fields['description'].required = True
+            self.fields['pretty_name'].help_text = "The name of your app"
+            self.fields['pretty_name'].required = True

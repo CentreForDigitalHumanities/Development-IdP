@@ -5,10 +5,16 @@
         <h1>Edit SP</h1>
     </div>
     <div class="uu-container">
+        <div class="col-12">
+            <p>
+                This is a subset of the available settings, with advanced options removed. Please edit the SP in the
+                <a href="{% url 'admin:djangosaml2idp_serviceprovider_change' object.pk %}">Django Admin</a> for all options.
+            </p>
+        </div>
         <form method="post" enctype="multipart/form-data" class="uu-form uu-form-no-gap mt-3">
             {% csrf_token %}
             {{ form }}
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn btn-primary mt-2">
                 Save
             </button>
         </form>
