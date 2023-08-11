@@ -107,6 +107,17 @@ class UserMail(models.Model):
     )
 
 
+class UserOU(models.Model):
+
+    name = models.CharField(
+        max_length=150,
+    )
+
+    user = models.ForeignKey(
+        'User',
+        on_delete=models.CASCADE,
+    )
+
 class User(AbstractBaseUser):
 
     username_validator = UnicodeUsernameValidator()
@@ -116,7 +127,7 @@ class User(AbstractBaseUser):
         max_length=150,
         unique=True,
         help_text=_(
-            "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+            "Username used to log in. Best to keep the same as 'uid'"
         ),
         validators=[username_validator],
         error_messages={
@@ -129,14 +140,20 @@ class User(AbstractBaseUser):
         max_length=150,
         unique=True,
         help_text="In UU terminology this is the Solis-ID, thus equal to "
-                  "username"
+                  "username. Maps to 'uuShortID' in the UU IdP."
     )
 
-    givenName = models.CharField(_("first name"), max_length=150, blank=True)
+    givenName = models.CharField(_("first name"),
+                                 help_text="Maps to 'givenName' in the UU "
+                                           "IdP.",
+                                 max_length=150,
+                                 blank=True)
     cn = models.CharField(_("common name"), max_length=150, blank=True)
     displayName = models.CharField(_("display name"), max_length=150,
                                    blank=True)
-    sn = models.CharField(_("last name"), max_length=150, blank=True)
+    sn = models.CharField(_("last name"), max_length=150, blank=True,
+                                 help_text="Maps to 'uuPrefixedSn' in the UU "
+                                           "IdP.",)
     schacHomeOrganization = models.CharField(_('home organisation'),
                                              max_length=150, blank=True)
     eduPersonPrincipalName = models.CharField(_('principal name'),
@@ -160,6 +177,9 @@ class User(AbstractBaseUser):
 
     def mail(self):
         return [x.email for x in self.usermail_set.all()]
+
+    def organizationalUnitName(self):
+        return [x.name for x in self.userou_set.all()]
 
     is_staff = models.BooleanField(
         _("staff status"),

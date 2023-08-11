@@ -3,26 +3,30 @@
 {% block html_head %}
     {{ block.super }}
     <script nonce="{{ request.csp_nonce }}">
-        function hideExtraForms(numExisting) {
-            $('.se-form').each((idx, el) => {
+        function hideExtraForms(numExisting, form_class) {
+            $(form_class).each((idx, el) => {
                 if (idx >= numExisting) {
                     $(el).hide();
                 }
             });
         }
-
-        $(function() {
-            $('#add_se').click((event) => {
+        function setupAddBtn(button_id, form_class) {
+            $(button_id).click((event) => {
                 event.preventDefault();
-                let hidden = $('.se-form:hidden');
+                let hidden = $(form_class+':hidden');
                 hidden.last().show();
 
                 if (hidden.length - 1 <= 0) {
-                    $('#add_se').hide();
+                    $(button_id).hide();
                 }
             });
+        }
 
-            hideExtraForms({{ object.usermail_set.count }});
+        $(function() {
+            setupAddBtn("#add_se", '.se-form');
+            setupAddBtn("#add_ou", '.ou-form');
+            hideExtraForms({{ object.usermail_set.count }}, '.se-form');
+            hideExtraForms({{ object.userou_set.count }}, '.ou-form');
         });
     </script>
 {% endblock %}
@@ -44,8 +48,13 @@
                 their documentation
                 </a> for detailed descriptions of all attributes.
             </p>
+            <p>
+                We don't know how all of these attributes map to the UU IdP, but
+                if we do, it will be in the help text. If you know any more
+                attribute names used by the UU IdP, please do tell.
+            </p>
         </div>
-        <form method="post" enctype="multipart/form-data" class="uu-form uu-form-no-gap mt-3">
+        <form method="post" enctype="multipart/form-data" class="uu-form mt-3">
             {% csrf_token %}
             {{ form }}
 
@@ -65,6 +74,26 @@
                             {% endfor %}
                             <a href="#" id="add_se">+ Add new</a>
                         </div>
+                    </div>
+                </div>
+                <div class="uu-form-row">
+                    <div class="uu-form-field">
+                        <label class="form-label">
+                            Organizational Unit Name
+                        </label>
+                        <div>
+                            {{ ou_formset.management_form }}
+                            {% for ou_form in ou_formset %}
+                                <div class="ou-form">
+                                    {{ ou_form.as_p }}
+                                    <hr/>
+                                </div>
+                            {% endfor %}
+                            <a href="#" id="add_ou">+ Add new</a>
+                        </div>
+                    </div>
+                    <div class="uu-form-help">
+                        Maps to 'uuLegacyDepartment' in the UU IdP
                     </div>
                 </div>
             {% endif %}

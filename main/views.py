@@ -11,7 +11,7 @@ from djangosaml2idp.models import ServiceProvider
 
 from main.attribute_map_presets import SC, SC_ALL, UU
 from main.forms import SPCreateForm, SPForm, UserForm
-from main.models import User, UserMail
+from main.models import User, UserMail, UserOU
 
 
 class HomeView(braces.LoginRequiredMixin, generic.TemplateView):
@@ -47,11 +47,23 @@ class UserEditView(braces.LoginRequiredMixin, generic.UpdateView):
         extra=4
     )
 
+    ou_formset = forms.inlineformset_factory(
+        User,
+        UserOU,
+        fields=('name',),
+        can_delete=True,
+        extra=4
+    )
+
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['mail_formset'] = kwargs.get(
             'mail_formset',
             self.mail_formset(instance=self.get_object())
+        )
+        context['ou_formset'] = kwargs.get(
+            'ou_formset',
+            self.ou_formset(instance=self.get_object())
         )
 
         return context
@@ -60,22 +72,24 @@ class UserEditView(braces.LoginRequiredMixin, generic.UpdateView):
     def post(self, request, *args, **kwargs):
         self.object = self.get_object()
         form = self.form_class(request.POST, instance=self.object)
-        formset = self.mail_formset(request.POST, instance=self.object)
+        mail_formset = self.mail_formset(request.POST, instance=self.object)
+        ou_formset = self.ou_formset(request.POST, instance=self.object)
 
-        if form.is_valid() and formset.is_valid():
-            return self.form_valid(form, formset)
+        if form.is_valid() and mail_formset.is_valid() and ou_formset.is_valid():
+            return self.form_valid(form, mail_formset, ou_formset)
         elif not form.is_valid():
             return self.form_invalid(form)
 
         return self.render_to_response(
             self.get_context_data(
                 form=form,
-                mail_formset=formset
+                mail_formset=mail_formset
             )
         )
 
-    def form_valid(self, form, formset):
-        formset.save()
+    def form_valid(self, form, mail_formset, ou_formset):
+        mail_formset.save()
+        ou_formset.save()
         return super().form_valid(form)
 
 
