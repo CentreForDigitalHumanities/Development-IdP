@@ -111,7 +111,7 @@ class SamlSPCreateView(braces.LoginRequiredMixin, generic.FormView):
 
         sp = ServiceProvider()
         sp.pretty_name = form.cleaned_data['name']
-        sp.pretty_name = form.cleaned_data['description']
+        sp.description = form.cleaned_data['description']
         sp._sign_response = True
         sp._sign_assertion = True
         sp._processor = settings.SAML_IDP_CONFIG['processor']
