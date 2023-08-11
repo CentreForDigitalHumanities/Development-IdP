@@ -45,26 +45,31 @@ referring to the same thing. This can be confusing, so to clear up:
 
 In the context _of this app_ you'll only have to worry about SP attribute maps,
 which both maps the internal attribute name to the name sent to the SP and 
-restricts what attribute names are sent. 
+restricts what attribute names are sent. (Any attribute not in the dict will 
+not be sent back to the SP.)
 
 For example, internally the Solis-ID is named ``uid``, but the UU IdP calls this
-attribute ``uushortid``. Thus, we need to _map_ ``uuid`` to ``uushortid``. 
+attribute ``uuShortId``. Thus, we need to _map_ ``uuid`` to ``uuShortId``. 
 
 Thus, you'll get this attribute map:
 ```json
 {
-    "uid": "uushortid",
+    "uid": "uuShortId",
 }
 ```
 
 However, with this map the IdP will only supply the SP the solis-id of the 
-logged in user. Thus, a more common attribute map would be:
+logged-in user. Thus, a more common attribute map would be:
 
 ```json
 {
-    "uid": "uushortid",
+    "uid": "uuShortId",
     "mail": "mail",
     "givenName": "givenName",
-    "sn": "uuprefixedsn",
+    "sn": "uuPrefixedSn"
 }
 ```
+
+The app provides a couple preset attribute maps, which can be chosen when 
+registering an SP in the app. These maps can also be consulted in the file
+`main/attribute_map_presets.py`.
