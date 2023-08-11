@@ -91,7 +91,8 @@ class SPCreateForm(TemplatedForm):
                   "Depending on your SP, you might need to create your own. ("
                   "It's recommended to load in the full SC attribute map in "
                   "that case, which contains all available attributes)",
-        required=False
+        required=False,
+        initial='UU',
     )
 
     def __init__(self, *args, **kwargs):
