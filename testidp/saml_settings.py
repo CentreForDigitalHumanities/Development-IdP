@@ -5,7 +5,7 @@ from saml2.sigver import get_xmlsec_binary
 from .settings import DEBUG, BASE_DIR
 
 LOGIN_URL = '/login/'
-BASE_URL = 'http://localhost:7000/saml/idp'
+BASE_URL = 'http://localhost:7001/saml/idp'
 
 SAML_IDP_SP_FIELD_DEFAULT_ATTRIBUTE_MAPPING = {
     "username": "uuShortID",
@@ -18,7 +18,7 @@ SAML_IDP_CONFIG = {
     'debug': DEBUG,
     'xmlsec_binary': get_xmlsec_binary(['/opt/local/bin', '/usr/bin']),
     'entityid': '%s/metadata' % BASE_URL,
-    'description': 'Example IdP setup',
+    'description': 'Second test IdP',
 
     'processor': 'testidp.saml_processor.SamlProcessor',
 
@@ -52,7 +52,7 @@ SAML_IDP_CONFIG = {
 
     'service': {
         'idp': {
-            'name': 'Django localhost IdP',
+            'name': 'Django localhost IdP 2',
             'endpoints': {
                 'single_sign_on_service': [
                     (f'{BASE_URL}/sso/post/',
@@ -85,4 +85,9 @@ SAML_IDP_CONFIG = {
         'cert_file': str(BASE_DIR) + '/certificates/public.cert',
     }],
     'valid_for': 365 * 24,
+    "organization": {
+        "name": [
+            ("Humanities IT", "en"),
+        ],
+    }
 }
