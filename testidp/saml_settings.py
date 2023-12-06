@@ -3,9 +3,14 @@ from saml2.saml import NAMEID_FORMAT_TRANSIENT, NAMEID_FORMAT_PERSISTENT
 from saml2.sigver import get_xmlsec_binary
 
 from .settings import DEBUG, BASE_DIR
+from .utils import discover
 
 LOGIN_URL = '/login/'
-BASE_URL = 'http://localhost:7001/saml/idp'
+
+BASE_URL = discover(
+    "idp_base_url",
+    default='http://localhost:7000/saml/idp'
+)
 
 SAML_IDP_SP_FIELD_DEFAULT_ATTRIBUTE_MAPPING = {
     "username": "uuShortID",

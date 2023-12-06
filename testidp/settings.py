@@ -14,6 +14,9 @@ from pathlib import Path
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 
+from .utils import discover
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -21,7 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-lb=q@u4df-x0th(5u%$eye_ti#etst+5z+%2=lrh$$le3&v_y$'
+default_key = 'django-insecure-lb=q@u4df-x0th(5u%$eye_ti#etst+5z+%2=lrh$$le3&v_y$'
+SECRET_KEY = discover("idp_django_key", default=default_key)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -110,10 +114,15 @@ EMAIL_FROM = 'T.D.Mees@uu.nl'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+db_location = discover(
+    "DJANGO_DB_LOCATION",
+    default=BASE_DIR / 'db.sqlite3',
+)
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': db_location,
     }
 }
 
