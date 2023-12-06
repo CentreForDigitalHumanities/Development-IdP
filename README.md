@@ -10,8 +10,9 @@ the future.
 
 ## Instructions
 
-1. Setup a virtualenv and activate it
-2. Install dependencies ``pip install -r requirements.txt``
+1. Install system dependencies ``apt install gettext git mariadb-client libmariadb-dev libffi-dev gcc xmlsec1``
+2. Setup a virtualenv and activate it
+3. Install python dependencies ``pip install -r requirements.txt``
 4. Run migrations ``python manage.py migrate``
 5. Load initial data ``python manage.py loaddata main/fixtures/initial.json``
 6. (Optional) Load admin user ``python manage.py loaddata main/fixtures/admin-user.json``
