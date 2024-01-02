@@ -65,7 +65,7 @@ class SPCreateForm(TemplatedForm):
                   "'http://localhost:8000/saml/metadata/')"
     )
 
-    metadata_url = forms.URLField(
+    metadata_url = forms.CharField(
         required=False,
         help_text="The IdP will import the metadata by fetching it from this "
                   "url, which is the recommended way to create a new SP"
