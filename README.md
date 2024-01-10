@@ -73,3 +73,17 @@ logged-in user. Thus, a more common attribute map would be:
 The app provides a couple preset attribute maps, which can be chosen when 
 registering an SP in the app. These maps can also be consulted in the file
 `main/attribute_map_presets.py`.
+
+## Known Issues
+### xmlsec1 bug for Mac users
+If you are working on an Apple device, you might run into problems with reading 
+the certificates for some obscure mac reasons. The currently functioning 
+workaround (as per 10-1-2024) is reverting your `xmlsec1` package to version
+`1.2.37`. You can do that with the following code ([source](https://github.com/xmlsec/python-xmlsec/issues/254#issuecomment-1726249435>`)): 
+
+```shell
+brew uninstall libxmlsec1
+export DESIRED_SHA="7f35e6ede954326a10949891af2dba47bbe1fc17"
+wget -O /tmp/libxmlsec1.rb "https://raw.githubusercontent.com/Homebrew/homebrew-core/${DESIRED_SHA}/Formula/libxmlsec1.rb"
+brew install --formula /tmp/libxmlsec1.rb
+```
