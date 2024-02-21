@@ -44,17 +44,18 @@ In SAML, (well, PySAML), the term attribute map is often used and often not even
 referring to the same thing. This can be confusing, so to clear up:
 
 In the context _of this app_ you'll only have to worry about SP attribute maps,
-which both maps the internal attribute name to the name sent to the SP and 
-restricts what attribute names are sent. (Any attribute not in the dict will 
-not be sent back to the SP.)
+which both maps the attribute name (as stored in the dev-IdP's database) to the 
+name sent to the SP and restricts what attribute names are sent. (Any attribute
+not in the dict will not be sent back to the SP.)
 
-For example, internally the Solis-ID is named ``uid``, but the UU IdP calls this
-attribute ``uuShortId``. Thus, we need to _map_ ``uuid`` to ``uuShortId``. 
+For example, internally the Solis-ID is named ``username``, but the UU IdP calls
+this attribute ``uuShortId``. Thus, we need to _map_ ``username`` to 
+``uuShortId``. 
 
 Thus, you'll get this attribute map:
 ```json
 {
-    "uid": "uuShortId",
+    "username": "uuShortId"
 }
 ```
 
@@ -63,7 +64,7 @@ logged-in user. Thus, a more common attribute map would be:
 
 ```json
 {
-    "uid": "uuShortId",
+    "username": "uuShortId",
     "mail": "mail",
     "givenName": "givenName",
     "sn": "uuPrefixedSn"

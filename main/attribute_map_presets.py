@@ -1,6 +1,5 @@
-
 UU = {
-    "uid": "uuShortID",
+    "username": "uuShortID",
     "mail": "mail",
     "givenName": "givenName",
     "sn": "uuPrefixedSn",
