@@ -5,7 +5,7 @@ from saml2.sigver import get_xmlsec_binary
 from .settings import DEBUG, BASE_DIR
 
 LOGIN_URL = '/login/'
-BASE_URL = 'http://localhost:7001/saml/idp'
+BASE_URL = 'http://localhost:7000/saml/idp'
 
 SAML_IDP_SP_FIELD_DEFAULT_ATTRIBUTE_MAPPING = {
     "username": "uuShortID",
