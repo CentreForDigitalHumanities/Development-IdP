@@ -1,0 +1,44 @@
+# App specific
+certificates
+*.sqlite3
+docker_initial_setup.sh
+
+# Common
+README.md
+
+# Docker
+docker-compose.yml
+Dockerfile
+.docker
+.dockerignore
+container.env
+
+# git
+.git
+.gitattributes
+.gitignore
+# GitHub
+.github
+
+## Python
+# Byte-compiled
+**/__pycache__/
+**/*.py[cod]
+
+# Virtual environment
+.env
+.venv/
+venv/
+
+## Editors
+# Vim swap files
+**/*.swp
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea
+
+# Notepad++
+.editorconfig
