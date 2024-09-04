@@ -177,7 +177,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = "/static/"
-STATIC_ROOT = "public/static/"
+STATIC_ROOT = "/static/"
 
 # Security
 # https://docs.djangoproject.com/en/2.0/topics/security/
