@@ -6,6 +6,7 @@ django-simple-menu
 django-debug-toolbar
 django-csp
 django-extensions
+whitenoise
 djangosaml2idp
 pip-tools
 cdh-django-core[core] @ git+https://github.com/DH-IT-Portal-Development/django-shared-core.git@v3.1.0-alpha-1
