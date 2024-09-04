@@ -6,12 +6,15 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies
+## Container dependencies
+RUN apk add postgresql-dev gcc musl-dev libffi-dev
+RUN pip install gunicorn psycopg2
+## App dependencies
 RUN apk add git xmlsec gettext
 RUN pip install -r requirements.txt
-RUN pip install gunicorn
 
-# Cleanup
-RUN apk del git
+# Cleanup build-only packages
+RUN apk del git postgresql-dev gcc musl-dev libffi-dev
 
 # Compile messages
 RUN python manage.py compilemessages
