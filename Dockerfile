@@ -8,7 +8,7 @@ COPY . /app
 # Install dependencies
 ## Container dependencies
 RUN apk add postgresql-dev gcc musl-dev libffi-dev
-RUN pip install gunicorn psycopg2
+RUN pip install gunicorn psycopg[c]
 ## App dependencies
 RUN apk add git xmlsec gettext
 RUN pip install -r requirements.txt
