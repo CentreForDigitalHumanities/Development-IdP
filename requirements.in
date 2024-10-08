@@ -6,8 +6,9 @@ django-simple-menu
 django-debug-toolbar
 django-csp
 django-extensions
+django-oauth-toolkit
+django-cors-headers
+whitenoise
 djangosaml2idp
-cryptography # Not needed if not using encrypted DB fields
 pip-tools
-mysqlclient
-cdh-django-core[core] @ git+https://github.com/DH-IT-Portal-Development/django-shared-core.git@v3.1.0-alpha-1
+cdh-django-core[core] @ git+https://github.com/CentreForDigitalHumanities/django-shared-core.git@v3.2.0

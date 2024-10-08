@@ -16,7 +16,9 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import include, path, re_path
+
+from idp.views import ConnectDiscoveryInfoView
 
 handler404 = 'main.error_views.error_404'
 handler500 = 'main.error_views.error_500'
@@ -27,6 +29,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('saml/idp/', include('idp.urls')),
+    re_path(
+        r"^o/\.well-known/openid-configuration/?$",
+        ConnectDiscoveryInfoView.as_view(),
+        name="oidc-connect-discovery-info",
+    ),
+    path("o/", include("oauth2_provider.urls", namespace="oauth2_provider")),
     path('impersonate/', include('impersonate.urls')),
     path('cdhcore/', include('cdh.core.urls')),
     path('i18n/', include('django.conf.urls.i18n')),

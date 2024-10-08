@@ -1,0 +1,27 @@
+services:
+  dev-idp:
+    build: .
+    ports:
+      - "7000:7000"
+    env_file:
+      - ./container.env
+    volumes:
+        - ./db:/run/db
+    networks:
+      - default
+    stdin_open: true
+    tty: true
+    secrets:
+      - private_key
+      - public_cert
+
+
+networks:
+  default:
+
+secrets:
+  private_key:
+    file: ./certificates/private.key
+  public_cert:
+    file: ./certificates/public.cert
+
