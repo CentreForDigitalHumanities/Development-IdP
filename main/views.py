@@ -8,9 +8,10 @@ from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views import generic
 from djangosaml2idp.models import ServiceProvider
+from oauth2_provider.models import Application
 
 from main.attribute_map_presets import SC, SC_ALL, UU
-from main.forms import SPCreateForm, SPForm, UserForm
+from main.forms import ApplicationForm, SPCreateForm, SPForm, UserForm
 from main.models import User, UserMail, UserOU
 
 
@@ -21,6 +22,7 @@ class HomeView(braces.LoginRequiredMixin, generic.TemplateView):
         context = super().get_context_data(**kwargs)
 
         context['service_providers'] = ServiceProvider.objects.all()
+        context['openid_applications'] = Application.objects.all()
         context['users'] = User.objects.all()
 
         return context
@@ -162,3 +164,40 @@ class SamlMetadataView(braces.LoginRequiredMixin, generic.View):
             )
 
         raise Http404
+
+
+class OpenIDApplicationEditView(braces.LoginRequiredMixin, generic.UpdateView):
+    model = Application
+    template_name = 'main/oidc_form.html'
+    form_class = ApplicationForm
+    success_url = reverse_lazy('main:home')
+
+
+class OpenIDApplicationCreateView(braces.LoginRequiredMixin, generic.FormView):
+    template_name = 'main/oidc_form_create.html'
+    form_class = ApplicationForm
+    success_url = reverse_lazy('main:home')
+
+    def form_valid(self, form):
+        resp = super().form_valid(form)
+
+        app = Application()
+        app.name = form.cleaned_data['name']
+        app.redirect_uris = form.cleaned_data['redirect_uris']
+        app.skip_authorization = form.cleaned_data['skip_authorization']
+
+        # Hardcoded values
+        app.user = self.request.user
+        app.client_type = "public"
+        app.authorization_grant_type = "authorization-code"
+        app.hash_client_secret = False
+        app.algorithm = "RS256"
+
+        app.save()
+
+        return resp
+
+class OpenIDApplicationDeleteView(braces.LoginRequiredMixin, generic.DeleteView):
+    model = Application
+    success_url = reverse_lazy('main:home')
+    template_name = 'main/oidc_form_delete.html'

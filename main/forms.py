@@ -4,6 +4,7 @@ from django.conf import settings
 from cdh.core.forms import TemplatedForm, TemplatedModelForm, \
     BootstrapCheckboxInput, BootstrapSelect
 from djangosaml2idp.models import ServiceProvider
+from oauth2_provider.models import Application
 
 from main.models import User
 
@@ -44,6 +45,31 @@ class UserForm(TemplatedModelForm):
 
     def clean_password(self):
         return f"plain${self.cleaned_data['password']}"
+
+
+class ApplicationForm(TemplatedModelForm):
+    class Meta:
+        model = Application
+        fields = [
+            'name',
+            'redirect_uris',
+            'skip_authorization',
+        ]
+        widgets = {
+            'redirect_uris': forms.Textarea,
+            'post_logout_redirect_uris': forms.Textarea,
+            'skip_authorization': BootstrapCheckboxInput,
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(ApplicationForm, self).__init__(*args, **kwargs)
+
+        if 'client_secret' in self.initial and self.initial['client_secret'].startswith(
+                'plain'):
+            self.initial['client_secret'] = self.initial['client_secret'].split('$', 2)[1]
+
+    def clean_client_secret(self):
+        return f"plain${self.cleaned_data['client_secret']}"
 
 
 class SPCreateForm(TemplatedForm):

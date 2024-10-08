@@ -2,14 +2,13 @@ services:
   dev-idp:
     build: .
     ports:
-      - 7000:7000
+      - "7000:7000"
     env_file:
       - ./container.env
     volumes:
         - ./db:/run/db
     networks:
       - default
-    # Below allows for debugging with pdb etc.
     stdin_open: true
     tty: true
     secrets:

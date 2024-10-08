@@ -87,6 +87,52 @@
             </table>
         </div>
     </div>
+
+    <div class="uu-hero text-bg-teal justify-content-between align-items-center">
+        <h1>OpenID Connect Applications</h1>
+        <a class="btn btn-secondary" href="{% url 'main:oidc-app-create' %}">
+            New
+        </a>
+    </div>
+
+    <div class="uu-container">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Client ID</th>
+                        <th>Client Secret</th>
+                        <th>Redirect uris</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for app in openid_applications %}
+                        <tr>
+                            <td>
+                                {{ app.name }}
+                            </td>
+                            <td class="text-break">
+                                {{ app.client_id }}
+                            </td>
+                            <td class="text-break">
+                                {{ app.client_secret }}
+                            </td>
+                            <td>
+                                {{ app.redirect_uris }}
+                            </td>
+                            <td>
+                                <a href="{% url 'main:oidc-app-edit' app.pk %}">Edit</a>
+                                <a href="{% url 'main:oidc-app-delete' app.pk %}">Delete</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
     <div class="uu-hero text-bg-teal justify-content-between align-items-center">
         <h1>Users</h1>
 

@@ -1,0 +1,23 @@
+{% extends 'base/app_base.html' %}
+
+{% block content %}
+    <div class="uu-hero text-bg-teal">
+        <h1>Delete OIDC App</h1>
+    </div>
+    <div class="uu-container">
+        <p>
+            Are you sure you want to delete application '{{ object }}'?
+        </p>
+        <form method="post" enctype="multipart/form-data" class="uu-form w-100 uu-form-no-gap">
+            {% csrf_token %}
+            <div class="btn-group">
+                <button type="submit" class="btn btn-primary">
+                    Delete
+                </button>
+                <a href="{% url 'main:home' %}" class="btn btn-secondary">
+                    Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

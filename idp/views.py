@@ -1,6 +1,9 @@
 import logging
+from urllib.parse import urlparse
+
 from django.contrib.auth import get_user_model, logout
-from django.http import HttpRequest, HttpResponseRedirect
+from django.http import HttpRequest, HttpResponseRedirect, JsonResponse
+from django.urls import reverse
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.decorators.cache import never_cache
@@ -10,6 +13,9 @@ from djangosaml2idp.error_views import error_cbv
 from djangosaml2idp.idp import IDP
 from djangosaml2idp.utils import repr_saml, verify_request_signature
 from djangosaml2idp.views import IdPHandlerViewMixin, store_params_in_session
+from oauth2_provider.models import AbstractGrant, Application
+from oauth2_provider.settings import oauth2_settings
+from oauth2_provider.views.mixins import OIDCOnlyMixin
 
 logger = logging.getLogger(__name__)
 
@@ -105,3 +111,75 @@ class LogoutProcessView(IdPHandlerViewMixin, View):
                 destination=destination,
                 relay_state=relay_state)
         return self.render_response(request, html_response, None)
+
+
+class ConnectDiscoveryInfoView(OIDCOnlyMixin, View):
+    """
+    View used to show oidc provider configuration information per
+    `OpenID Provider Metadata <https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata>`_
+
+    Modified to support UU weirdness
+    """
+
+    def get(self, request, *args, **kwargs):
+        issuer_url = oauth2_settings.OIDC_ISS_ENDPOINT
+
+        if not issuer_url:
+            issuer_url = oauth2_settings.oidc_issuer(request)
+            authorization_endpoint = request.build_absolute_uri(reverse("oauth2_provider:authorize"))
+            token_endpoint = request.build_absolute_uri(reverse("oauth2_provider:token"))
+            userinfo_endpoint = oauth2_settings.OIDC_USERINFO_ENDPOINT or request.build_absolute_uri(
+                reverse("oauth2_provider:user-info")
+            )
+            introspection_endpoint =  request.build_absolute_uri(reverse('oauth2_provider:introspect'))
+            jwks_uri = request.build_absolute_uri(reverse("oauth2_provider:jwks-info"))
+            if oauth2_settings.OIDC_RP_INITIATED_LOGOUT_ENABLED:
+                end_session_endpoint = request.build_absolute_uri(
+                    reverse("oauth2_provider:rp-initiated-logout")
+                )
+        else:
+            parsed_url = urlparse(oauth2_settings.OIDC_ISS_ENDPOINT)
+            host = parsed_url.scheme + "://" + parsed_url.netloc
+            authorization_endpoint = "{}{}".format(host, reverse("oauth2_provider:authorize"))
+            token_endpoint = "{}{}".format(host, reverse("oauth2_provider:token"))
+            userinfo_endpoint = oauth2_settings.OIDC_USERINFO_ENDPOINT or "{}{}".format(
+                host, reverse("oauth2_provider:user-info")
+            )
+            introspection_endpoint = "{}{}".format(host, reverse('oauth2_provider:introspect'))
+
+            jwks_uri = "{}{}".format(host, reverse("oauth2_provider:jwks-info"))
+            if oauth2_settings.OIDC_RP_INITIATED_LOGOUT_ENABLED:
+                end_session_endpoint = "{}{}".format(host, reverse("oauth2_provider:rp-initiated-logout"))
+
+        signing_algorithms = [Application.HS256_ALGORITHM]
+        if oauth2_settings.OIDC_RSA_PRIVATE_KEY:
+            signing_algorithms = [Application.RS256_ALGORITHM, Application.HS256_ALGORITHM]
+
+        # Weird UU behavior, only openid scope is advertised but other scopes are supported
+        scopes_supported = ["openid"]
+        # More weird UU behavior, no claims are advertised but claims are supported
+        oidc_claims = []
+
+
+        data = {
+            "issuer": issuer_url,
+            "authorization_endpoint": authorization_endpoint,
+            "token_endpoint": token_endpoint,
+            "userinfo_endpoint": userinfo_endpoint,
+            "introspection_endpoint": introspection_endpoint,
+            "jwks_uri": jwks_uri,
+            "scopes_supported": scopes_supported,
+            "response_types_supported": oauth2_settings.OIDC_RESPONSE_TYPES_SUPPORTED,
+            "subject_types_supported": oauth2_settings.OIDC_SUBJECT_TYPES_SUPPORTED,
+            "id_token_signing_alg_values_supported": signing_algorithms,
+            "token_endpoint_auth_methods_supported": (
+                oauth2_settings.OIDC_TOKEN_ENDPOINT_AUTH_METHODS_SUPPORTED
+            ),
+            "code_challenge_methods_supported": [key for key, _ in AbstractGrant.CODE_CHALLENGE_METHODS],
+            "claims_supported": oidc_claims,
+        }
+        if oauth2_settings.OIDC_RP_INITIATED_LOGOUT_ENABLED:
+            data["end_session_endpoint"] = end_session_endpoint
+        response = JsonResponse(data)
+        response["Access-Control-Allow-Origin"] = "*"
+        return response

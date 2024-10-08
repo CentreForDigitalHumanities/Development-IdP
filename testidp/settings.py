@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "djangosaml2idp",
+    "oauth2_provider",
     # Django extensions
     "django_extensions",
     # django-simple-menu
@@ -76,7 +77,10 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "csp.middleware.CSPMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 if DEBUG and ENABLE_DEBUG_TOOLBAR:
     INSTALLED_APPS.append("debug_toolbar")
@@ -272,4 +276,10 @@ try:
     from .saml_settings import *
 except Exception as e:
     print("Could not load SAML settings somehow?")
+    raise e
+
+try:
+    from .openid_settings import *
+except Exception as e:
+    print("Could not load OpenID settings somehow?")
     raise e
