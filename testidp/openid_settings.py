@@ -2,8 +2,11 @@ from .settings import BASE_DIR
 
 PRIVATE_KEY = str(BASE_DIR) + '/certificates/private.key'
 
-with open(PRIVATE_KEY) as f:
-    OIDC_RSA_PRIVATE_KEY = f.read()
+try:
+    with open(PRIVATE_KEY) as f:
+        OIDC_RSA_PRIVATE_KEY = f.read()
+except FileNotFoundError:
+    OIDC_RSA_PRIVATE_KEY = None
 
 
 OAUTH2_PROVIDER = {
