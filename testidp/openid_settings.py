@@ -1,4 +1,5 @@
 from .settings import BASE_DIR
+from . import env
 
 PRIVATE_KEY = str(BASE_DIR) + '/certificates/private.key'
 
