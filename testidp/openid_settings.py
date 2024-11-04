@@ -2,6 +2,10 @@ from .settings import BASE_DIR
 
 PRIVATE_KEY = str(BASE_DIR) + '/certificates/private.key'
 
+
+if private_key := env.get("DJANGO_IDP_PRIVATE_KEY", default=None):
+    PRIVATE_KEY = private_key
+
 try:
     with open(PRIVATE_KEY) as f:
         OIDC_RSA_PRIVATE_KEY = f.read()
