@@ -1,6 +1,11 @@
 from .settings import BASE_DIR
+from . import env
 
 PRIVATE_KEY = str(BASE_DIR) + '/certificates/private.key'
+
+
+if private_key := env.get("DJANGO_IDP_PRIVATE_KEY", default=None):
+    PRIVATE_KEY = private_key
 
 try:
     with open(PRIVATE_KEY) as f:
