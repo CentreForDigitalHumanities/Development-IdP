@@ -15,6 +15,7 @@ the future.
 TODO: write this. TL;DR: ``docker-compose up`` and `./docker_initial_setup.sh` the first time.
 
 ### Running locally
+requirement: Make sure xmlsec is installed.
 
 1. Setup a virtualenv and activate it
 2. Install dependencies ``pip install -r requirements.txt``
