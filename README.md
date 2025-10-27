@@ -16,8 +16,9 @@ TODO: write this. TL;DR: ``docker-compose up`` and `./docker_initial_setup.sh` t
 
 ### Running locally
 
-1. Setup a virtualenv and activate it
-2. Install dependencies ``pip install -r requirements.txt``
+1. See Dockerfile for system dependencies (gettext, rust, cargo, xmlsec)
+2. Setup a virtualenv and activate it
+3. Install Python dependencies ``pip install -r requirements.txt``
 4. Run migrations ``python manage.py migrate``
 5. Load initial data ``python manage.py loaddata main/fixtures/initial.json``
 6. (Optional) Load admin user ``python manage.py loaddata main/fixtures/admin-user.json``
