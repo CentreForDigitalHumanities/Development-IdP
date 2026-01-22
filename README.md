@@ -9,6 +9,16 @@ NOTE: Currently only SAML is implemented, with OpenID possibly being added in
 the future.
 
 ## Instructions
+### Some concepts and terminology
+_identity provider (IdP)_ = The entity providing authentication/identification 
+services, in this case the Development-IdP application running locally
+
+_service provider (SP)_ = The entity providing a service for which authentication 
+is required, i.e. the application that is using the Dev-IdP to authenticate users.
+
+_SAML service provider_ = An application that uses SAML for authentication.
+_OpenID Connect service provider_ = An application that uses OpenID Connect for 
+authentication.
 
 ### Running with Docker
 
@@ -36,7 +46,7 @@ TODO: write this. TL;DR: ``docker-compose up`` and `./docker_initial_setup.sh` t
 ## Adding SAML Service Providers
 
 1. Make sure your app has SAML already setup and is using
-   ``http(s)://localhost:7000/saml/idp/metadata`` as it's IdP
+   ``http(s)://localhost:7000/saml/idp/metadata`` as its IdP
    * Replacing ``localhost:7000`` with the actual IP of the IdP
 2. Click 'New' next to Service Provider in the app
 3. Provide at least your SP's ``entity_id`` and ``metadata`` (preferably by URL import)
