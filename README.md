@@ -49,11 +49,15 @@ TODO: write this. TL;DR: ``docker-compose up`` and `./docker_initial_setup.sh` t
    ``http(s)://localhost:7000/saml/idp/metadata`` as its IdP
    * Replacing ``localhost:7000`` with the actual IP of the IdP
 2. Click 'New' next to Service Provider in the app
-3. Provide at least your SP's ``entity_id`` and ``metadata`` (preferably by URL import)
+3. Provide at least your SP's ``entity_id``[^1] and ``metadata``[^2] (preferably by URL import)
 4. Choose your starting attribute map*
 5. Done!
 6. Optionally: review your new SP by editting. You might want to add missing
    attributes to the attribute map
+
+[^1]: looks as follows: `<ip_of_service_provider>/users/saml2/metadata/`
+[^2]: Following the link above in your browser, inspect the page using developer tools (F12) to reveal 
+the underlying XML file, which needs to be pasted in full into the metadata text box.
 
 ### Note on attribute maps
 
