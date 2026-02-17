@@ -55,9 +55,11 @@ TODO: write this. TL;DR: ``docker-compose up`` and `./docker_initial_setup.sh` t
 6. Optionally: review your new SP by editting. You might want to add missing
    attributes to the attribute map
 
-[^1]: looks as follows: `<ip_of_service_provider>/users/saml2/metadata/`
-[^2]: Following the link above in your browser, inspect the page using developer tools (F12) to reveal 
-the underlying XML file, which needs to be pasted in full into the metadata text box.
+[^1]: this isn't universal, but usually looks as follows: `<ip_of_service_provider>/users/saml2/metadata/` 
+or `<ip_of_service_provider>/users/saml/metadata/`
+[^2]: Following the link above in your browser, inspect the page by clicking the right mouse-button on the 
+page and selecting "view source" the underlying XML file, which needs to be pasted in full into the metadata 
+text box.
 
 ### Note on attribute maps
 
