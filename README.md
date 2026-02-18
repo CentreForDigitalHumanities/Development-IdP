@@ -9,6 +9,16 @@ NOTE: Currently only SAML is implemented, with OpenID possibly being added in
 the future.
 
 ## Instructions
+### Some concepts and terminology
+_identity provider (IdP)_ = The entity providing authentication/identification 
+services, in this case the Development-IdP application running locally
+
+_service provider (SP)_ = The entity providing a service for which authentication 
+is required, i.e. the application that is using the Dev-IdP to authenticate users.
+
+_SAML service provider_ = An application that uses SAML for authentication.
+_OpenID Connect service provider_ = An application that uses OpenID Connect for 
+authentication.
 
 ### Running with Docker
 
@@ -36,14 +46,20 @@ TODO: write this. TL;DR: ``docker-compose up`` and `./docker_initial_setup.sh` t
 ## Adding SAML Service Providers
 
 1. Make sure your app has SAML already setup and is using
-   ``http(s)://localhost:7000/saml/idp/metadata`` as it's IdP
+   ``http(s)://localhost:7000/saml/idp/metadata`` as its IdP
    * Replacing ``localhost:7000`` with the actual IP of the IdP
 2. Click 'New' next to Service Provider in the app
-3. Provide at least your SP's ``entity_id`` and ``metadata`` (preferably by URL import)
+3. Provide at least your SP's ``entity_id``[^1] and ``metadata``[^2] (preferably by URL import)
 4. Choose your starting attribute map*
 5. Done!
 6. Optionally: review your new SP by editting. You might want to add missing
    attributes to the attribute map
+
+[^1]: this isn't universal, but usually looks as follows: `<ip_of_service_provider>/users/saml2/metadata/` 
+or `<ip_of_service_provider>/users/saml/metadata/`
+[^2]: Following the link above in your browser, inspect the page by clicking the right mouse-button on the 
+page and selecting "view source" the underlying XML file, which needs to be pasted in full into the metadata 
+text box.
 
 ### Note on attribute maps
 
@@ -83,15 +99,4 @@ registering an SP in the app. These maps can also be consulted in the file
 `main/attribute_map_presets.py`.
 
 ## Known Issues
-### xmlsec1 bug for Mac users
-If you are working on an Apple device, you might run into problems with reading
-the certificates for some obscure mac reasons. The currently functioning
-workaround (as per 10-1-2024) is reverting your `xmlsec1` package to version
-`1.2.37`. You can do that with the following code ([source](https://github.com/xmlsec/python-xmlsec/issues/254#issuecomment-1726249435>`)):
 
-```shell
-brew uninstall libxmlsec1
-export DESIRED_SHA="7f35e6ede954326a10949891af2dba47bbe1fc17"
-wget -O /tmp/libxmlsec1.rb "https://raw.githubusercontent.com/Homebrew/homebrew-core/${DESIRED_SHA}/Formula/libxmlsec1.rb"
-brew install --formula /tmp/libxmlsec1.rb
-```
