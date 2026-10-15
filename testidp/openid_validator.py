@@ -37,7 +37,11 @@ class OpenIDValidator(OAuth2Validator):
         email = request.user.mail()
         if email:
             data["website"] = email[0]  # Don't ask
-            data["email"] = email[0]
+            # Yes this is against spec; UU IdP is also against spec soooo
+            if len(email) == 1:
+                data["email"] = email[0]
+            else:
+                data["email"] = email
             data["email_verified"] = True
         else:
             data["website"] = ""
