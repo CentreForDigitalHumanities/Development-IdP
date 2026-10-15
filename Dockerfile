@@ -24,7 +24,7 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # Install App dependencies
-RUN apk add --no-cache xmlsec gettext
+RUN apk add --no-cache xmlsec gettext postgresql-libs
 # Copy over the build venv
 COPY --from=builder /opt/venv /opt/venv
 
